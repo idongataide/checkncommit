@@ -217,10 +217,11 @@
                </div><!-- col end-->
             </div><!-- row end-->
             <div class="row">
-               <div class="col-lg-3 col-md-6">
+              <?php for($i=0; $i<4; $i++) {?>
+            <div class="col-lg-3 col-md-6">
                   <div class="ts-speaker">
                      <div class="speaker-img">
-                        <img class="img-fluid" src="images/speakers/speaker1.jpg" alt="">
+                        <img class="img-fluid" src="images/business/ads.jpg" alt="">
                         <a href="#popup_1" class="view-speaker ts-image-popup" data-effect="mfp-zoom-in">
                                     <i class="icon icon-plus"></i>
                                 </a>
@@ -231,7 +232,9 @@
                            Founder, Edilta
                         </p>
                      </div>
-                  </div>
+                  </div> </div>
+              <?php }?>
+
                   <!-- popup start-->
                   <div id="popup_1" class="container ts-speaker-popup mfp-hide">
                      <div class="row">
@@ -296,7 +299,7 @@
          <div class="speaker-shap">
             <img class="shap1" src="images/shap/home_speaker_memphis1.png" alt="">
             <img class="shap2" src="images/shap/home_speaker_memphis2.png" alt="">
-            <img class="shap3" src="images/shap/home_speaker_memphis3.png" alt="">
+        
          </div>
          <!-- shap img end-->
       </section>
