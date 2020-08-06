@@ -205,18 +205,90 @@
 </div>
 </div>
 </section>
-      <!-- ts speaker start-->
-      <section id="ts-speakers" class="ts-speakers" style="background-image:url(images/speakers/speaker_bg.png)">
+
+    <section id="ts-speakers" class="ts-speakers speaker-classic" style="background-image:url(images/speakers/speaker_bg.png)">
          <div class="container">
             <div class="row">
                <div class="col-lg-8 mx-auto">
                   <h2 class="section-title text-center">
-                     <span>Varities of Business</span>
-                     Our Market Place
+                     <span>Listen to the</span>
+                     Event Speakers
                   </h2>
                </div><!-- col end-->
             </div><!-- row end-->
-            <div class="row" style="height:400px;">            
+            <div class="row">
+               <div class="col-lg-3 col-md-6">
+                  <div class="ts-speaker">
+                     <div class="speaker-img">
+                        <img class="img-fluid" src="images/speakers/speaker1.jpg" alt="">
+                        <a href="#popup_1" class="view-speaker ts-image-popup" data-effect="mfp-zoom-in">
+                                    <i class="icon icon-plus"></i>
+                                </a>
+                     </div>
+                     <div class="ts-speaker-info">
+                        <h3 class="ts-title"><a href="#">Fredric Martinsson</a></h3>
+                        <p>
+                           Founder, Edilta
+                        </p>
+                     </div>
+                  </div>
+                  <!-- popup start-->
+                  <div id="popup_1" class="container ts-speaker-popup mfp-hide">
+                     <div class="row">
+                        <div class="col-lg-6">
+                           <div class="ts-speaker-popup-img">
+                              <img src="images/speakers/speaker1.jpg" alt="">
+                           </div>
+                        </div><!-- col end-->
+                        <div class="col-lg-6">
+                           <div class="ts-speaker-popup-content">
+                              <h3 class="ts-title">David Robert</h3>
+                              <span class="speakder-designation">Cheif Architecture</span>
+                              <img class="company-logo" src="images/sponsors/sponsor-6.png" alt="">
+                              <p>
+                                 World is committed to making participation in the event a harass ment free experience
+                                 for everyone, regardless of level experience gender, gender identity and expression
+                              </p>
+                              <h4 class="session-name">
+                                 Sessions by David
+                              </h4>
+                              <div class="row">
+                                 <div class="col-lg-6">
+                                    <div class="speaker-session-info">
+                                       <h4>Day 1</h4>
+                                       <span>
+                                                   10.30 - 11.30 am
+                                             </span>
+                                       <p>
+                                          Marketing Matters
+                                       </p>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-6">
+                                    <div class="speaker-session-info">
+                                       <h4>Day 1</h4>
+                                       <span>
+                                                      10.30 - 11.30 am
+                                                </span>
+                                       <p>
+                                          Marketing Matters
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="ts-speakers-social">
+                                 <a href="#"><i class="fa fa-facebook"></i></a>
+                                 <a href="#"><i class="fa fa-twitter"></i></a>
+                                 <a href="#"><i class="fa fa-instagram"></i></a>
+                                 <a href="#"><i class="fa fa-google-plus"></i></a>
+                                 <a href="#"><i class="fa fa-linkedin"></i></a>
+                              </div>
+                           </div><!-- ts-speaker-popup-content end-->
+                        </div><!-- col end-->
+                     </div><!-- row end-->
+                  </div><!-- popup end-->
+               </div> <!-- col end-->
+                         
             </div><!-- row end-->
          </div><!-- container end-->
 
@@ -228,7 +300,6 @@
          </div>
          <!-- shap img end-->
       </section>
-      <!-- ts speaker end-->
 
       <!-- ts experience start-->
       <section id="ts-experiences" class="ts-experiences" style="background-image:url(images/speakers/speaker_bg.png);">
@@ -258,8 +329,6 @@
          </div><!-- container fluid end-->
       </section>
       <!-- ts experience end-->
-
-     
 
       <!-- ts pricing start-->
       <section class="ts-pricing gradient" style="background-image: url(images/pricing/pricing_img.jpg)">
@@ -360,9 +429,6 @@
          </div>
       </section>
       <!-- ts pricing end-->
-    
-
-  
       <?php include 'footer.php'?>
 
  
