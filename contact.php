@@ -146,11 +146,11 @@
 
                      </div>
                      <div class="form-group">
-                        <textarea class="form-control form-control-message" name="message" id="message" placeholder="Your message...*"
+                        <textarea class="form-control messages" name="message" id="message" placeholder="Your message...*"
                            rows="6" required></textarea>
                      </div>
                      <div class="text-center"><br>
-                        <button class="btn" type="submit"> Send Message</button>
+                        <button class="btns" type="submit"> Send Message</button>
                      </div>
                   </form><!-- Contact form end -->
                </div>

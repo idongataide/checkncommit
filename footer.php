@@ -20,7 +20,7 @@
                         <div class="col-lg-6 mx-auto">
                            <div class="ts-newsletter-content">
                               <h2 class="section-title">
-                                 <span>sUBSCRIBE TO nEWSLETTER</span>
+                                 <span>SUBSCRIBE TO NEWSLETTER</span>
                                  Want something extra?
                               </h2>
                            </div>
@@ -31,7 +31,7 @@
                                        placeholder="Your Email" autocomplete="off" required="">
                                  </div>
                                  <div class="d-flex ts-submit-btn">
-                                    <button class="btn">Subscribe</button>
+                                    <button class="btns">Subscribe</button>
                                  </div>
                               </form>
                            </div>
@@ -73,12 +73,12 @@
                            <li><a href="#">About Eventime</a></li>
                            <li><a href="#">Blog</a></li>
                            <li><a href="#">Contact</a></li>
-                           <li><a href="#">Tickets</a></li>
+                           <li><a href="faq">Faq</a></li>
                            <li><a href="#">Venue</a></li>
                         </ul>
                      </div><!-- footer menu end-->
                      <div class="copyright-text text-center">
-                        <p>Copyright © 2019 Exhibz. All Rights Reserved.</p>
+                        <p>Copyright © 2019 Hardensoft Limited. All Rights Reserved.</p>
                      </div>
                   </div>
                </div>
