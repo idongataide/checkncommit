@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php include 'control.php'?>
 <?php include 'header.php'?>
 <body>
@@ -435,3 +436,12 @@
       <?php include 'footer.php'?>
 
  
+=======
+<?php 
+	session_start();
+	require_once './app/init.php';
+	$app = new APP;
+	// header("location: cat.php");
+	// exit();
+ ?>
+>>>>>>> 1d5972771a22dc6bbef5f8122117bf23e6aef916
