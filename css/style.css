@@ -507,9 +507,73 @@ ul, ol {
 
 /* ADMIN LOGIN ENDS */
 
+/* user registeration */
+
+.hero-form-content {
+  margin-top: 50px;
+  background: #fff;
+  padding: 40px 30px;
+  text-align: center;
+  border-top: 4px solid #e7015e; }
+  .hero-form-content h2 {
+    font-size: 27px;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 10px;
+    padding-bottom: 20px; }
+    .hero-form-content h2:before {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      display: block;
+      text-align: center;
+      background: url(images/shap/title-red.png) no-repeat center center;
+      max-width: 70px;
+      height: 10px;
+      content: ''; }
+  .hero-form-content p {
+    margin-bottom: 30px; }
+
+.hero-form .form-control {
+  border: none;
+  border-bottom: 1px solid #e1e1e1;
+  border-radius: 0;
+  margin-bottom: 25px;
+  font-size: 14px;
+  padding-left: 5px; }
+  .hero-form .form-control:focus {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline: none; }
+
+.hero-form .btn {
+  display: block;
+  width: 100%; }
+
+.hero-form select {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #e1e1e1;
+  font-size: 14px;
+  padding: 6px 0px;
+  color: #888888;
+  line-height: 27px;
+  margin-bottom: 40px; }
+  .hero-form select option {
+    border: none;
+    line-height: 28px;
+    padding: 10px 0; }
+
+    /* users registeration ends */
+
+
 /* USER LOGIN ENDS */
 /*//////////////////////////////////////////////////////////////////
 [ login ]*/
+
+
 
 .ucontainer-login100 {
   width: 100%;  
@@ -1650,6 +1714,7 @@ img.pull-right {
   left: 0;
   border-bottom: 1px solid #ffffff65;
   top: 0;
+  background: #134712;
   z-index: 2;
   height: auto; }
   .header.header-transparent .navbar-brand {
@@ -3662,6 +3727,7 @@ faq-item
     padding: 12px;
     font-size: 18px;
     margin: 0;
+    color: #000000;
 }
 
 .top-business > span {

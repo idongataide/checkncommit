@@ -11,8 +11,8 @@
 <div class="row d-md-flex no-gutters slider-text align-items-center justify-content-center">
 <div class="col-md-10 d-flex align-items-center ftco-animate">
 <div class="text text-center pt-5 mt-5">
-<p class="mb-4">Find Job, Employment, and Career Opportunities</p>
-<h1 class="mb-5 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="600ms">The Eassiest Way to Get Your New Job</h1>
+<p class="mb-4">Our Reviews tells you the truth</p>
+<h1 class="mb-5 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="600ms">Don't Buy Based on Lies</h1>
 <div class="ftco-counter ftco-no-pt ftco-no-pb">
 <div class="row">
 <div class="col-md-6 d-flex justify-content-center counter-wrap ftco-animate">
