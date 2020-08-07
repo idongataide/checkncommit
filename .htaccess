@@ -1,5 +1,9 @@
+Options -Indexes
 RewriteEngine On
 
+RewriteBase /checkncommit
+
+#RewriteCond %{REQUEST_METHOD} POST
 
 #RewriteRule ^(.+)$ index.php [L]
 
@@ -7,5 +11,8 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 
-RewriteRule ^([^\.]+)$ $1.php [NC,L]
-RewriteCond %{HTTPS} !=on 
+
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+
+
+
