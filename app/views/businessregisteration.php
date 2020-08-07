@@ -18,59 +18,63 @@
          </div><!-- Subpage title end -->
       </div><!-- Page Banner end -->
 
+	  <?php if(isset($data['reg_data'])){
+                $message = $data['reg_data']['log']; $colour = $data['reg_data']['colour'];
+        }
+                else $message =""; $colour = "";
+              ?> 
                 <div class="col-md-8 mx-auto shadow"> 
+					<p style="color: <?=$colour?>;"><?=$message?></p>
 				<form class="vlogin100-form">
                 <div class="col-lg-6">
 					<div class="vwrap-input100 validate-input m-b-26">
-						<input class="vinput100" type="text" name="fname" placeholder="Enter First Name">
+						<input class="vinput100" type="text" name="fname" placeholder="Enter First Name" required>
 					</div>
                  </div>
                  <div class="col-lg-6">
 					<div class="vwrap-input100 validate-input m-b-26">
-						<input class="vinput100" type="text" name="username" placeholder="Enter Last Name">
-					</div>
-                 </div>
-                 <div class="col-lg-6">
-					<div class="vwrap-input100 validate-input m-b-26">
-						<input class="vinput100" type="text" name="username" placeholder="Enter Middle Name">
+						<input class="vinput100" type="text" name="lname" placeholder="Enter Last Name" required>
 					</div>
                  </div>
                  <div class="col-lg-6">
 					<div class="vwrap-input100 validate-input m-b-26" >
-						<input class="vinput100" type="text" name="username" placeholder="Enter Username">
+						<input class="vinput100" type="text" name="username" placeholder="Enter Username" required>
 					</div>
                  </div>
                  <div class="col-lg-6">
 					<div class="vwrap-input100 validate-input m-b-26">
-						<input class="vinput100" type="text" name="username" placeholder="Enter Business Name">
+						<input class="vinput100" type="text" name="business_name" placeholder="Enter Business Name" required>
 					</div>
                  </div>
                  <div class="col-lg-6"> 
 					<div class="vwrap-input100 validate-input m-b-26">
-						<input class="vinput100" type="text" name="username" placeholder="Phone Number">
+						<input class="vinput100" type="tel" name="phone" placeholder="Phone Number" required>
 					</div>
                  </div>
                  <div class="col-lg-6">
 					<div class="vwrap-input100 validate-input m-b-26">
-						<input class="vinput100" type="text" name="username" placeholder="Address">
+						<input class="vinput100" type="text" name="address" placeholder="Address" required>
 					</div>
                  </div>
                  <div class="col-lg-6">
 					<div class="vwrap-input100 validate-input m-b-26">
-						<input class="vinput100" type="text" name="username" placeholder="Enter City">
+					<select class="vinput100 form-control" name="city" id="city">
+					</select>
 					</div>
                  </div>
                  <div class="col-lg-6">
 					<div class="vwrap-input100 validate-input m-b-26" >
-						<select class="vinput100 form-control" name="username">
-                            <option disabled> Choose State</option>
-                            <option> Choose State</option>
+						<select class="vinput100 form-control" name="state" id="state">
+						<option> --Select a State--</option>
+						<?php foreach($data['states'] as $key => $state): ?>
+						<option value="<?=$state['state_id']?>"><?=$state['name']?></option>
+						<?php endforeach ?>
                         </select>
 					</div>
                  </div>
 					<div class="flex-sb-m w-full p-b-30">
 						<div class="vcontact100-form-checkbox">
-							<input class="vinput-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+							<input class="vinput-checkbox100" id="ckb1" type="checkbox" name="remember-me" required>
 							<label class="vlabel-checkbox100" for="ckb1">
 								Remember me
 							</label>
@@ -96,5 +100,6 @@
 
 </body>
 <?php include 'footer.php'?>
+<script src="public/js/cities.js"></script>
 
 </html>
