@@ -10,7 +10,7 @@ class Admin extends Controller
 	}
 	function index(){
 		if(!(isset($_SESSION['admin_id']))){
-			header('location: /login');
+			header('location: admin/login');
 			die();
 		}
 		
@@ -18,9 +18,6 @@ class Admin extends Controller
 			'profile' => $this->adminRead->getProfile($_SESSION['admin_id'])
 			
 		);
-		$data['order_count'] = $this->adminRead->getOrderCount();
-		$data['user_count'] = $this->adminRead->getUserCount();
-		$data['product_count'] = $this->adminRead->getProductCount();
 		$this->view($this->dir_name.'index', $data);
 	}
 	function users(){
@@ -183,10 +180,23 @@ class Admin extends Controller
 		$data['invoice'] = $this->adminRead->getInvoice($id); 
 		//var_dump($data); die();
 		$this->view($this->dir_name.'invoice', $data);
-        }
+	}
+	function login(){
+		//die(password_hash('checkncommit@11', PASSWORD_BCRYPT));
+		$data = array();
+		if(isset($_POST['login'])){
+			//var_dump($_FILES['book']);die();
+			$data['login'] = $this->adminRead->adminlogin($_POST);
+			if($data['login']['status'] == 'success' ){
+				header('Location: ../admin/index');
+				die();				
+			}
+		}
+		$this->view('admin-login', $data);
+	}
 	function logout(){
 		session_destroy();
-		header('Location: /login');
+		header('Location: admin/login');
 		die();
 	}
 

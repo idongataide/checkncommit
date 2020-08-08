@@ -34,8 +34,9 @@
                      <li class="nav-item">
                         <a href="contact">Contact</a>
                      </li>
+                     <?php $name = (isset($_SESSION['user_id'])) ? $_SESSION['username'] : "" ; ?>
                      <li class="header-ticket nav-item">
-                        <a class="welcome-btn btn" href="profile"> <i class="fa fa-user"></i> Welcome Idy
+                        <a class="welcome-btn btn" href="profile"> <i class="fa fa-user"></i> Welcome <?=$name?>
                         </a>
                      </li>
                   </ul>

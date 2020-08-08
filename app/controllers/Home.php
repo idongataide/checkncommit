@@ -8,7 +8,7 @@ class Home extends Controller
 	{
 		$this->read = new DBRead();
 		$this->adminRead = new AdminDBRead();
-		$this->vebdRead = new VendorDBRead();
+		$this->vendRead = new VendorDBRead();
 		$this->write = new DBWrite();
 	}
 	
@@ -22,6 +22,38 @@ class Home extends Controller
 		
 		$data['title'] = 'About Us';
 		$this->view('about', $data);
+	}
+	function activate($id = ""){
+		$data = null; 
+		if($id == ""){
+			$_SESSION['failed'] = 'Invalid Token';
+			header('location: ../failed'); die();
+			
+		}
+		$data = $this->write->activateUser($id);
+		if($data['status'] == 'success'){
+			header('location: ../success'); die();
+		}
+		else {
+			$_SESSION['failed'] = $data['log'];
+			header('location: ../failed'); die();
+		}
+	}
+	function activatestore($id = ""){
+		$data = null;
+		if($id == ""){
+			$_SESSION['failed'] = 'Invalid Token';
+			header('location: ../vendor/failed'); die();
+			
+		}
+		$data = $this->write->activateStore($id);
+		if($data['status'] == 'success'){
+			header('location: ../vendor/success'); die();
+		}
+		else {
+			header('location: ../vendor/failed'); die();
+			$_SESSION['failed'] = $data['log'];
+		}
 	}
 	function adminlogin(){
 		$data = array();
@@ -48,10 +80,9 @@ class Home extends Controller
 			$data = $this->vendRead->login($_POST);
 			$_SESSION['message'] = $data['log'];
 		}
-		if(isset($_POST['order'])){
+		if(isset($_POST['register'])){
 			//var_dump($_POST); die();
-			$data = $this->write->order($_POST);
-			$_SESSION['order'] = $data['log'];
+			$data['reg_data'] = $this->write->registerBusiness($_POST);
 		}
 
 		$data['title'] = 'Vendor Registration'; 
@@ -81,17 +112,11 @@ class Home extends Controller
 	function userlogin(){
 		$data = array();
 		if(isset($_POST['login'])){
-			$data = $this->read->login($_POST);
-			$_SESSION['message'] = $data['log'];
-			if($data['status'] == 'success' ){
+			$data['login'] = $this->read->login($_POST);
+			if($data['login']['status'] == 'success' ){
 					header('Location: index');
 					die();				
 			}
-		}
-		if(isset($_POST['order'])){
-			//var_dump($_POST); die();
-			$data = $this->write->order($_POST);
-			$_SESSION['order'] = $data['log'];
 		}
 
 		$data['title'] = 'User Login'; 
@@ -100,9 +125,8 @@ class Home extends Controller
 	function vendorlogin(){
 		$data = array();
 		if(isset($_POST['login'])){
-			$data = $this->vendRead->login($_POST);
-			$_SESSION['message'] = $data['log'];
-			if($data['status'] == 'success' ){
+			$data['login'] = $this->vendRead->login($_POST);
+			if($data['login']['status'] == 'success' ){
 					header('Location: vendor/index');
 					die();				
 			}

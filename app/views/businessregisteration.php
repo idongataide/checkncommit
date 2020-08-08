@@ -1,4 +1,4 @@
-<?php include 'control.php'?>
+<?php require_once 'control.php'?>
 <?php include 'header.php'?>
 <body>
       <div id="page-banner-area" class="page-banner-area" style="background-image:url(public/images/hero_area/banner_bg.jpg)">
@@ -28,43 +28,53 @@
 				<form class="vlogin100-form">
                 <div class="col-lg-6">
 					<div class="vwrap-input100 validate-input m-b-26">
-						<input class="vinput100" type="text" name="fname" placeholder="Enter First Name" required>
+						<input class="vinput100" type="text" name="business_fname" placeholder="Enter First Name" maxlength="50" required>
 					</div>
                  </div>
                  <div class="col-lg-6">
 					<div class="vwrap-input100 validate-input m-b-26">
-						<input class="vinput100" type="text" name="lname" placeholder="Enter Last Name" required>
+						<input class="vinput100" type="text" name="business_lname" placeholder="Enter Last Name" maxlength="50" required>
 					</div>
                  </div>
                  <div class="col-lg-6">
 					<div class="vwrap-input100 validate-input m-b-26" >
-						<input class="vinput100" type="text" name="username" placeholder="Enter Username" required>
+						<input class="vinput100" type="email" name="business_email" placeholder="Enter Email" maxlength="100" required>
 					</div>
                  </div>
                  <div class="col-lg-6">
 					<div class="vwrap-input100 validate-input m-b-26">
-						<input class="vinput100" type="text" name="business_name" placeholder="Enter Business Name" required>
+						<input class="vinput100" type="text" name="business_name" placeholder="Enter Business Name" maxlength="100" required>
 					</div>
                  </div>
                  <div class="col-lg-6"> 
 					<div class="vwrap-input100 validate-input m-b-26">
-						<input class="vinput100" type="tel" name="phone" placeholder="Phone Number" required>
+						<input class="vinput100" type="tel" name="business_phone" placeholder="Phone Number" required>
+					</div>
+				 </div>
+				 <div class="col-lg-6"> 
+					<div class="vwrap-input100 validate-input m-b-26">
+						<input class="vinput100" type="password" name="pass" placeholder="Enter Password" required>
+					</div>
+				 </div>
+				 <div class="col-lg-6"> 
+					<div class="vwrap-input100 validate-input m-b-26">
+						<input class="vinput100" type="password" name="cPass" placeholder="Confirm Password" required>
 					</div>
                  </div>
                  <div class="col-lg-6">
 					<div class="vwrap-input100 validate-input m-b-26">
-						<input class="vinput100" type="text" name="address" placeholder="Address" required>
+						<input class="vinput100" type="text" name="business_address" placeholder="Address" maxlength="100" required>
 					</div>
                  </div>
                  <div class="col-lg-6">
 					<div class="vwrap-input100 validate-input m-b-26">
-					<select class="vinput100 form-control" name="city" id="city">
+					<select class="vinput100 form-control" name="business_city" id="city">
 					</select>
 					</div>
                  </div>
                  <div class="col-lg-6">
 					<div class="vwrap-input100 validate-input m-b-26" >
-						<select class="vinput100 form-control" name="state" id="state">
+						<select class="vinput100 form-control" name="business_state" id="state">
 						<option> --Select a State--</option>
 						<?php foreach($data['states'] as $key => $state): ?>
 						<option value="<?=$state['state_id']?>"><?=$state['name']?></option>
@@ -88,7 +98,7 @@
 					</div>
 
 					<div class="container-login100-form-btn">
-						<button class="vlogin100-form-btn">
+						<button class="vlogin100-form-btn" type="submit" name="register">
 							Registration
 						</button>
 					</div>

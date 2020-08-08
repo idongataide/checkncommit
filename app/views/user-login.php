@@ -9,14 +9,19 @@
 				<div class="ulogin100-pic js-tilt" data-tilt>
 					<img src="public/img/img-01.png" alt="IMG">
 				</div>
-
-				<form class="ulogin100-form validate-form">
+				<?php if(isset($data['login'])){
+                $message = $data['login']['log']; $colour = $data['login']['colour'];
+        }
+                else $message =""; $colour = "";
+              ?> 
+				<form class="ulogin100-form validate-form" method="post">
 					<span class="ulogin100-form-title">
 						Member Login
 					</span>
+					<p style="color: <?=$colour?>;"><?=$message?></p>
 
 					<div class="uwrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="email" placeholder="Email">
+						<input class="input100" type="text" name="email" placeholder="Email" required>
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
@@ -24,7 +29,7 @@
 					</div>
 
 					<div class="uwrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" name="pass" placeholder="Password">
+						<input class="input100" type="password" name="pass" placeholder="Password" required>
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
@@ -32,7 +37,7 @@
 					</div>
 					
 					<div class="ucontainer-login100-form-btn">
-						<button class="ulogin100-form-btn">
+						<button class="ulogin100-form-btn" type="submit" name="login">
 							Login
 						</button>
 					</div>

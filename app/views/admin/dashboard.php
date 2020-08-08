@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="">
     <meta name="msapplication-tap-highlight" content="no">
-    <link href="../css/main.css" rel="stylesheet">
+    <link href="public/css/main.css" rel="stylesheet">
 
     <style>
         .vertical-nav-menu li a {        
@@ -96,22 +96,21 @@
                                 <div class="widget-content-left">
                                     <div class="btn-group">
                                         <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
-                                            <img width="42" class="rounded-circle" src="../images/avatars/1.jpg" alt="">
+                                            <img width="42" class="rounded-circle" src="public/images/avatars/1.jpg" alt="">
                                             <i class="fa fa-angle-down ml-2 opacity-8"></i>
                                         </a>
                                         <div tabindex="-1" role="menu" aria-hidden="true" class="rm-pointers dropdown-menu-lg dropdown-menu dropdown-menu-right">
                                             <div class="dropdown-menu-header">
                                                 <div class="dropdown-menu-header-inner bg-info">
-                                                    <div class="menu-header-image opacity-2" style="background-image: url('../images/dropdown-header/city3.jpg');"></div>
+                                                    <div class="menu-header-image opacity-2" style="background-image: url('public/images/dropdown-header/city3.jpg');"></div>
                                                     <div class="menu-header-content text-left">
                                                         <div class="widget-content p-0">
                                                             <div class="widget-content-wrapper">
                                                                 <div class="widget-content-left mr-3">
-                                                                    <img width="42" class="rounded-circle" src="../images/avatars/1.jpg" alt="">
+                                                                    <img width="42" class="rounded-circle" src="public/images/avatars/1.jpg" alt="">
                                                                 </div>
                                                                 <div class="widget-content-left">
-                                                                    <div class="widget-heading">Alina Mcloughlin</div>
-                                                                    <div class="widget-subheading opacity-8">A short profile description</div>
+                                                                    <div class="widget-heading"><?=$_SESSION['username']?></div>
                                                                 </div>
                                                                 <div class="widget-content-right mr-2">
                                                                     <button class="btn-pill btn-shadow btn-shine btn btn-focus">Logout</button>
@@ -247,5 +246,5 @@
             </div>
  <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
      
-<script type="text/javascript" src="../js/dashboard.js"></script></body>
+<script type="text/javascript" src="public/js/dashboard.js"></script></body>
 </html>
