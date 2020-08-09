@@ -9,8 +9,8 @@
     <link rel="stylesheet" type="text/css" href="public/css/animate.css">
 	<link rel="stylesheet" href="public/css/owl.carousel.min.css">
     <link rel="stylesheet" type="text/css" href="public/css/hamburgers.min.css">
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome/public/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="public/fonts/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="public/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
 	<link rel="stylesheet" type="text/css" href="public/css/util.css">
     <link rel="stylesheet" href="public/css/flaticon.css">
     <link rel="stylesheet" href="public/css/icomoon.css">

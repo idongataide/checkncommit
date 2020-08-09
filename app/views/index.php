@@ -8,7 +8,7 @@
 <div class="overlay"></div>
 <div class="container">
 <div class="row d-md-flex no-gutters slider-text align-items-center justify-content-center">
-<div class="col-md-10 d-flex align-items-center ftco-animate">
+<div class="col-md-10  align-items-center mx-auto ftco-animate">
 <div class="text text-center pt-5 mt-5">
 <p class="mb-4">Find Job, Employment, and Career Opportunities</p>
 <h1 class="mb-5 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="600ms">The Eassiest Way to Get Your New Job</h1>
@@ -58,7 +58,13 @@
 <div class="form-group">
 <div class="form-field">
 <div class="icon"><span class="icon-briefcase"></span></div>
-<input type="text" class="form-control" placeholder="eg. Garphic. Web Developer">
+<select name="" id="" class="form-control">
+<option  selected value="">State</option>
+<option value="">Abia</option>
+<option value="">Adamawa</option>
+<option value="">Akwa Ibom</option>
+
+</select>
 </div>
 </div>
 </div>
@@ -68,30 +74,19 @@
 <div class="select-wrap">
 <div class="icon"><span class="ion-ios-arrow-down"></span></div>
 <select name="" id="" class="form-control">
-<option value="">Category</option>
-<option value="">Full Time</option>
-<option value="">Part Time</option>
-<option value="">Freelance</option>
-<option value="">Internship</option>
-<option value="">Temporary</option>
+<option selected value="">Category</option>
+<option value="">Fashion</option>
 </select>
 </div>
 </div>
 </div>
 </div>
-<div class="col-md mr-md-2">
-<div class="form-group">
-<div class="form-field">
-<div class="icon"><span class="icon-map-marker"></span></div>
-<input type="text" class="form-control" placeholder="Location">
-</div>
-</div>
-</div>
+
 <div class="col-md">
 <div class="form-group">
 <div class="form-field">
       <a href="business">
-<button type="button" class="form-control btn btn-green">Search</button></a>
+<button type="button" class="form-control btn btn-green"><span class="icon-search"></span> Search</button></a>
 </div>
 </div>
 </div>
@@ -210,8 +205,8 @@
             <div class="row">
                <div class="col-lg-8 mx-auto">
                   <h2 class="section-title text-center">
-                     <span>Listen to the</span>
-                     Event Speakers
+                     <span>Our Sample</span>
+                      Products
                   </h2>
                </div><!-- col end-->
             </div><!-- row end-->
@@ -226,9 +221,9 @@
                                 </a>
                      </div>
                      <div class="ts-speaker-info">
-                        <h3 class="ts-title"><a href="#">Fredric Martinsson</a></h3>
+                        <h3 class="ts-title"><a href="#">Gucci Watch</a></h3>
                         <p>
-                           Founder, Edilta
+                           N, 5000
                         </p>
                      </div>
                   </div> </div>

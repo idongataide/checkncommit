@@ -184,6 +184,7 @@ class Admin extends Controller
 	function login(){
 		//die(password_hash('checkncommit@11', PASSWORD_BCRYPT));
 		$data = array();
+		$data['title'] = 'Admin Login';
 		if(isset($_POST['login'])){
 			//var_dump($_FILES['book']);die();
 			$data['login'] = $this->adminRead->adminlogin($_POST);

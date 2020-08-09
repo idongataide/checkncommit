@@ -40,7 +40,7 @@
                                                     </div>
                                                 </td>
                                                 <td class="text-center text-muted">090090987</td>
-                                                <td class="text-center">Madrid</td>
+                                                <td class="text-center">Nigeria</td>
                                                 <td class="text-center">
                                                     <div class="badge badge-success">Pending</div>
                                                 </td>

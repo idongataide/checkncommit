@@ -32,15 +32,15 @@
             <div class="row">
                <div class="col-lg-4">
                   <div class="single-intro-text single-contact-feature">
-                     <h3 class="ts-title">Tickets info</h3>
+                     <h3 class="ts-title">Head Office</h3>
                      <p>
-                        <strong>Name:</strong> Ronaldo König
+                        <strong>Address:</strong> 
                      </p>
                      <p>
                         <strong>Phone:</strong> 009-215-5595
                      </p>
                      <p>
-                        <strong>Email:</strong> info@example.com
+                        <strong>Email:</strong> info@checkncommit.com
                      </p>
                      <span class="count-number fa fa-paper-plane"></span>
                   </div><!-- single intro text end-->
@@ -48,15 +48,15 @@
                </div><!-- col end-->
                <div class="col-lg-4">
                   <div class="single-intro-text single-contact-feature">
-                     <h3 class="ts-title">Partnerships info</h3>
+                     <h3 class="ts-title">Branch Office</h3>
                      <p>
-                        <strong>Name:</strong> Ronaldo König
+                        <strong>Address:</strong> 
                      </p>
                      <p>
                         <strong>Phone:</strong> 009-215-5595
                      </p>
                      <p>
-                        <strong>Email:</strong> info@example.com
+                        <strong>Email:</strong> info@checkncommit.com
                      </p>
                      <span class="count-number fa fa-paper-plane"></span>
                   </div><!-- single intro text end-->
@@ -64,15 +64,15 @@
                </div><!-- col end-->
                <div class="col-lg-4">
                   <div class="single-intro-text single-contact-feature">
-                     <h3 class="ts-title">Programme Details</h3>
+                     <h3 class="ts-title">Branch Office</h3>
                      <p>
-                        <strong>Name:</strong> Ronaldo König
+                        <strong>Name:</strong> 
                      </p>
                      <p>
                         <strong>Phone:</strong> 009-215-5595
                      </p>
                      <p>
-                        <strong>Email:</strong> info@example.com
+                        <strong>Email:</strong> info@checkncommit.com
                      </p>
                      <span class="count-number fa fa-paper-plane"></span>
                   </div><!-- single intro text end-->

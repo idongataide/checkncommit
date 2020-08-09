@@ -2,7 +2,7 @@
     <!-- ts footer area start-->
     <div class="footer-area">
           <!-- ts-book-seat start-->
-          <section class="ts-book-seat" style="background-image: url(images/footer_img.png)">
+          <section class="ts-book-seat" style="background-image: url(public/images/footer_img.png)">
             <div class="container">
                <div class="row">
                   <div class="col-lg-8 mx-auto">
@@ -70,15 +70,13 @@
                      <!-- footer social end-->
                      <div class="footer-menu text-center mb-25">
                         <ul>
-                           <li><a href="#">About Eventime</a></li>
                            <li><a href="#">Blog</a></li>
-                           <li><a href="#">Contact</a></li>
+                           <li><a href="contact">Contact</a></li>
                            <li><a href="faq">Faq</a></li>
-                           <li><a href="#">Venue</a></li>
                         </ul>
                      </div><!-- footer menu end-->
                      <div class="copyright-text text-center">
-                        <p>Copyright © 2019 Hardensoft Limited. All Rights Reserved.</p>
+                        <p>Copyright © 2020 Hardensoft Limited. All Rights Reserved.</p>
                      </div>
                   </div>
                </div>

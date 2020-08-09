@@ -51,6 +51,9 @@
     height: 60px;
     color: #000000;
 }
+.logo{
+color:white; font-size:25px; font-family:san-serif;
+}
     </style>
 </head>
     <body>
@@ -58,7 +61,7 @@
     <div class="app-container app-theme-white body-tabs-shadow fixed-header fixed-sidebar">
         <div class="app-header header-shadow">
             <div class="app-header__logo">
-                <div class="logo-src"></div>
+                <div class="logo"><b>ChecknCommit</b></div>
                 <div class="header__pane ml-auto">
                     <div>
                         <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
@@ -147,14 +150,9 @@
                                     </div>
                                 </div>
                                 <div class="widget-content-left  ml-3 header-user-info">
-                                    <div class="widget-heading"> Alina Mclourd </div>
+                                    <div class="widget-heading"> <?=$_SESSION['username']?> </div>
                                     <div class="widget-subheading">Administrator </div>
-                                </div>
-                                <div class="widget-content-right header-user-info ml-3">
-                                    <button type="button" class="btn-shadow p-1 btn btn-primary btn-sm show-toastr-example">
-                                        <i class="fa text-white fa-calendar pr-1 pl-1"></i>
-                                    </button>
-                                </div>
+                                </div>                             
                             </div>
                         </div>
                     </div>
