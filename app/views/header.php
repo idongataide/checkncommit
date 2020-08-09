@@ -1,3 +1,5 @@
+<?php include 'control.php'?>
+
   <header id="header" class="header header-transparent">
          <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
