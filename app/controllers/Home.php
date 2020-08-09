@@ -78,6 +78,7 @@ class Home extends Controller
 		$data['title'] = 'FAQ';
 		$this->view('faq', $data);
 	}
+	
 	function userlogin(){
 		$data = array();
 		if(isset($_POST['login'])){
