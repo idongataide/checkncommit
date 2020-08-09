@@ -12,14 +12,14 @@
         function login($data){
             $email = mysqli_real_escape_string($this->connection, $data['email']);
 			$password = mysqli_real_escape_string($this->connection, $data['password']);
-			$query = "select * from vendor where store_email = '{$email}'";
+			$query = "select * from business where business_email = '{$email}'";
 			if($result = mysqli_query($this->connection, $query)){
 				if(mysqli_num_rows($result) > 0){
 					$arr = mysqli_fetch_assoc($result);
 					$status = $arr['status'];
 					if(password_verify($password, $arr['password'])){
 						if($status == 'active'){
-						$_SESSION['store_id'] = $arr['vendor_id'];
+						$_SESSION['business_id'] = $arr['business_id'];
 						return array('status' => 'success');
 						}
 						else return array('status' => 'failed', 'log' => 'Account not activated. Kindly activate your account from your email.', 'colour' => 'red');
@@ -37,8 +37,8 @@
 			return array('status' => 'failed', 'log' => mysqli_error($this->connection), 'colour' => 'red');
 		}
 		function getProfile($id){
-			$query = mysqli_query($this->connection, "SELECT * from vendor LEFT JOIN states on vendor.store_state = states.state_id
-			LEFT JOIN cities on vendor.store_city = cities.city_id where vendor_id = '$id'");
+			$query = mysqli_query($this->connection, "SELECT * from business LEFT JOIN states on business.store_state = states.state_id
+			LEFT JOIN cities on business.store_city = cities.city_id where business_id = '$id'");
 			return mysqli_fetch_assoc($query);
 		}
 		function getCategories(){
@@ -47,8 +47,8 @@
 		}
 		function getProducts($id){
 			$query = mysqli_query($this->connection, "SELECT * FROM `products` LEFT JOIN categories
-			ON products.prod_cat = categories.cat_id LEFT JOIN product_vendor 
-			ON products.prod_id = product_vendor.p_no WHERE v_no = $id");
+			ON products.prod_cat = categories.cat_id LEFT JOIN product_business 
+			ON products.prod_id = product_business.p_no WHERE v_no = $id");
 			return $this->getStructureData($query);
 		}
 		function getProduct($id){
@@ -59,24 +59,24 @@
 		function getOrders($id){
 			$query = mysqli_query($this->connection, "SELECT * FROM `order_details` LEFT JOIN products 
 			on order_details.prod_no = products.prod_id LEFT JOIN customer on order_details.user_no = customer.id 
-			left join product_vendor on order_details.prod_no = product_vendor.p_no left join vendor on 
-			product_vendor.v_no = vendor.vendor_id WHERE v_no = '$id' ORDER BY order_details.date DESC");
+			left join product_business on order_details.prod_no = product_business.p_no left join business on 
+			product_business.v_no = business.business_id WHERE v_no = '$id' ORDER BY order_details.date DESC");
 			return $this->getStructureData($query);
 		}
 		function getInvoice($id, $vend){
 			$query = mysqli_query($this->connection, "SELECT * FROM `order_details` LEFT JOIN products 
             ON order_details.prod_no = products.prod_id LEFT JOIN customer ON order_details.user_no = customer.id  
-            LEFT JOIN product_vendor on products.prod_id = product_vendor.p_no LEFT JOIN vendor on product_vendor.v_no = vendor.vendor_id
-            LEFT JOIN states on vendor.store_state = states.state_id 
-			WHERE invoice_id = '$id'AND vendor.vendor_id = '$vend' ");
+            LEFT JOIN product_business on products.prod_id = product_business.p_no LEFT JOIN business on product_business.v_no = business.business_id
+            LEFT JOIN states on business.store_state = states.state_id 
+			WHERE invoice_id = '$id'AND business.business_id = '$vend' ");
 			return $this->getStructureData($query);
 		}
 		function getInvoiceState($id, $vend){
 			$query = mysqli_query($this->connection, "SELECT * FROM `order_details` LEFT JOIN products 
-            ON order_details.prod_no = products.prod_id  LEFT JOIN product_vendor on products.prod_id = product_vendor.p_no
-			LEFT JOIN vendor on product_vendor.v_no = vendor.vendor_id LEFT JOIN states
+            ON order_details.prod_no = products.prod_id  LEFT JOIN product_business on products.prod_id = product_business.p_no
+			LEFT JOIN business on product_business.v_no = business.business_id LEFT JOIN states
 			on order_details.state = states.state_id LEFT JOIN cities on order_details.order_city = cities.city_id
-			WHERE invoice_id = '$id'AND vendor.vendor_id = '$vend'");
+			WHERE invoice_id = '$id'AND business.business_id = '$vend'");
 			return $this->getStructureData($query);
 		}
 		function getDeliveryFee($id){
@@ -96,7 +96,7 @@
 			while($row = mysqli_fetch_array($query))
 			{
 				$not_id = $row['not_id'];
-			$url = 'vendor/gasorders/'.$row['invoice_id'];
+			$url = 'business/gasorders/'.$row['invoice_id'];
 			$date = $row['notif_date'];
 			  $output .= '
 			  <li>

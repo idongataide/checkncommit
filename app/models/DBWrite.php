@@ -12,27 +12,152 @@ class DBWrite extends DBConn
 		parent::__construct();
 		$this->read = new DBRead();
 	}
-	function addUser($data){
-		$name = $this->read->escape($data['name']);
-		$role = $this->read->escape($data['role']);
-		$username = $this->read->escape( $data['username']);
-		$password = $this->read->escape($data['password']);
-		$c_password = $this->read->escape($data['cpassword']);
+	function registerUser($data){
+		$name = $this->read->escape($data['fname']);
+		$lname = $this->read->escape($data['lname']);
+		$username = $this->read->escape($data['username']);
+		$email = $this->read->escape($data['email']);
+		$address = $this->read->escape( $data['address']);
+		$state = $this->read->escape( $data['state']);
+		$city = $this->read->escape( $data['city']);
+		$phone = $this->read->escape( $data['phone']);
+		$password = $this->read->escape($data['pass']);
+		$c_password = $this->read->escape($data['cPass']);
 		if($password != $c_password){
 			return array('status' => 'failed', 'colour'=> 'red', 'log'=>'Passwords are not same!');
 		}
 		$password = password_hash($password, PASSWORD_BCRYPT);
 		$token = bin2hex(random_bytes(60));
 
+		$email_exist = $this->read->userEmailExists($email);
+		if($email_exist !=0 ){
+			return array('status' => 'failed', 'colour'=> 'red', 'log'=>'Email exists');
+		}
+
 		$query = "INSERT into users
-		( `name`, `username`, `password`, `role`) VALUES 
-		('{$name}', '{$username}', '{$password}','{$role}')";
+		( `fname`,  `lname`, `username`,  `user_email`, `password`, `user_phone`, `user_address`, `user_state`, user_city , `token`, `status`) VALUES 
+		('{$name}', '{$lname}', '{$username}', '{$email}', '{$password}','{$phone}','{$address}','{$state}', {$city}, '{$token}',
+		'Not active')";
 
 		if($run_query = mysqli_query($this->connection, $query)){
+			$mail = new PHPMailer;
+			// $mail->SMTPDebug = 3;
+			$mail->isSMTP();          // Set mailer to use SMTP
+			$mail->Host = 'mail.sidimart.com';  // Specify main and backup SMTP servers
+			$mail->SMTPAuth = true;          // Enable SMTP authentication
+			$mail->Username = 'noreply@sidimart.com';                
+			$mail->Password = 'sidimart@11';                          
+			$mail->SMTPSecure = 'tls';       // Enable TLS encryption, `ssl` also accepted
+			$mail->Port = 26;          // TCP port to connect to
+			$mail->setFrom('noreply@sidimart.com', 'Sidimart');
+			$mail->addAddress($email, $name.' '.$lname);
+			$mail->SMTPOptions = array(
+				'ssl' => array(
+					'verify_peer' => false,
+					'verify_peer_name' => false,
+					'allow_self_signed' => true
+				)
+			  );
+			  $url = 'http://localhost:8080/checkncommit/activate/'.$token;
+			$mail->isHTML(true);
+			$mail->Subject  = 'Welcome to ChecknCommit';
+			$mail->Body     = '<body>
 		
-			return array('status' => 'success', 'colour'=> 'green',
-				'log' => 'User created succesfully.');}
-		else{
+		<h4>Dear '.$name.',</h4>
+	
+		<p>Welcome to ChecknCommit and thank you for joining our 
+		platform. 
+		
+		
+		<br>Activate Your Account <br>
+		<a  href="'.$url.'">Here</a>
+		<br>Kind Regards,
+		<br>
+		<br>ChecknCommit Team
+	    </p>
+		</body>';
+			if(!$mail->send()) {
+				return array('status' => 'failed', 'colour'=> 'red','log' =>'Message was not sent. Mailer error: ' . $mail->ErrorInfo);
+			}
+			else{ 
+				return array('status' => 'success', 'colour'=> 'green',
+				'log' => 'Account created succesfully, please kindly check your email to activate your account.');}
+
+		}else{
+			return array('status' => 'failed', 'colour'=> 'red','log' => mysqli_error($this->connection));
+		}
+	}
+	function registerBusiness($data){
+		$name = $this->read->escape($data['business_fname']);
+		$lname = $this->read->escape($data['business_lname']);
+		$email = $this->read->escape($data['business_email']);
+		$address = $this->read->escape( $data['business_address']);
+		$state = $this->read->escape( $data['business_state']);
+		$city = $this->read->escape( $data['business_city']);
+		$phone = $this->read->escape( $data['business_phone']);
+		$store = $this->read->escape( $data['business_name']);
+		$password = $this->read->escape($data['pass']);
+		$c_password = $this->read->escape($data['cPass']);
+		if($password != $c_password){
+			return array('status' => 'failed', 'colour'=> 'red', 'log'=>'Passwords are not same!');
+		}
+		$password = password_hash($password, PASSWORD_BCRYPT);
+		$token = bin2hex(random_bytes(60));
+
+		$email_exist = $this->read->emailExists($email);
+		if($email_exist !=0 ){
+			return array('status' => 'failed', 'colour'=> 'red', 'log'=>'Email exists');
+		}
+
+		$query = "INSERT into business
+		( `business_fname`,  `business_lname`, `store_name`,  `business_email`, `password`, `business_phone`, `business_address`, `business_state`, business_city , `token`, `status`, `verified`) VALUES 
+		('{$name}', '{$lname}', '{$store}', '{$email}', '{$password}','{$phone}','{$address}','{$state}', {$city}, '{$token}','Not active', 'false')";
+
+		if($run_query = mysqli_query($this->connection, $query)){
+			$mail = new PHPMailer;
+			// $mail->SMTPDebug = 3;
+			$mail->isSMTP();          // Set mailer to use SMTP
+			$mail->Host = 'mail.joyzgas.com';  // Specify main and backup SMTP servers
+			$mail->SMTPAuth = true;          // Enable SMTP authentication
+			$mail->Username = 'official@joyzgas.com';                
+			$mail->Password = 'joyzgas@11';                          
+			$mail->SMTPSecure = 'tls';       // Enable TLS encryption, `ssl` also accepted
+			$mail->Port = 26;          // TCP port to connect to
+			$mail->setFrom('official@joyzgas.com', 'ChecknCommit');
+			$mail->addAddress($email, $name.' '.$lname);
+			$mail->SMTPOptions = array(
+				'ssl' => array(
+					'verify_peer' => false,
+					'verify_peer_name' => false,
+					'allow_self_signed' => true
+				)
+			  );
+			  $url = 'http://localhost:8080/checkncommit/activatestore/'.$token;
+			$mail->isHTML(true);
+			$mail->Subject  = 'Welcome to ChecknCommit';
+			$mail->Body     = '<body>
+		
+		<h4>Dear '.$name.',</h4>
+	
+		<p>Welcome to ChecknCommit and thank you for joining our 
+		platform. 
+		
+		
+		<br>Activate Your Account <br>
+		<a  href="'.$url.'">Here</a>
+		<br>Kind Regards,
+		<br>
+		<br>ChecknCommit Team
+	    </p>
+		</body>';
+			if(!$mail->send()) {
+				return array('status' => 'failed', 'colour'=> 'red','log' =>'Message was not sent. Mailer error: ' . $mail->ErrorInfo);
+			}
+			else{ 
+				return array('status' => 'success', 'colour'=> 'green',
+				'log' => 'Account created succesfully, please kindly check your email to activate your account.');}
+
+		}else{
 			return array('status' => 'failed', 'colour'=> 'red','log' => mysqli_error($this->connection));
 		}
 	}
@@ -53,6 +178,23 @@ class DBWrite extends DBConn
 			}
 		}
 		else return array('status' => 'failed', 'log' => 'Invalid Token');
+	}
+	function activateStore($token){
+		$query = mysqli_query($this->connection, "SELECT * FROM business where token = '$token'");
+		if($query){
+			if($token == "0"){
+				return array('status' => 'failed', 'log' => 'Invalid Token');
+			}
+			if(mysqli_num_rows($query) ==1){
+				$row = mysqli_fetch_assoc($query);
+				$id = $row['vendor_id'];
+				$check = mysqli_query($this->connection, "UPDATE `business` set `status` = 'active',`token` = 0 where business_id = '$id'");
+				if($check){
+					return array('status' => 'success');
+				}else return array('status' => 'failed', 'log' => mysqli_error($this->connection));
+			}
+		}
+		else return array('status' => 'failed', 'log' => 'Token not found');
 	}
 	function insertFile($file, $prodId){
 		

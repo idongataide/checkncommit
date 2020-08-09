@@ -9,31 +9,42 @@
                      <div class="hero-form-content">
                         <h2>Register Now</h2>
                         <p>
-                           Fill in the for to commence 
+                           Fill in the form to commence 
                         </p>
-                        <form action="#" method="POST" class="hero-form">
-                           <input class="form-control form-control-name" placeholder="First Name" name="name" id="f-name"
-                              type="text" required="">
-                              <input class="form-control form-control-name" placeholder="Middle Name" name="name" id="f-name"
-                              type="text" required="">
-                              <input class="form-control form-control-name" placeholder="Last Name" name="name" id="f-name"
-                              type="text" required="">                             
-                           <input class="form-control form-control-phone" placeholder="Phone" name="phone" id="f-phone"
+                        <?php if(isset($data['reg_data'])){
+                           $message = $data['reg_data']['log']; $colour = $data['reg_data']['colour'];
+                     }
+                           else {$message =""; $colour = "";}
+                           ?>
+                           <p style="color: <?=$colour?>"><?=$message?></p>
+                        <form method="POST" class="hero-form">
+                           <input class="form-control form-control-name" placeholder="First Name" name="fname" 
+                              type="text" maxlength="50" required>
+                              <input class="form-control form-control-name" placeholder="Last Name" name="lname" 
+                              type="text" maxlength="50" required>                             
+                              <input class="form-control form-control-name" placeholder="Username" name="username"
+                              type="text" maxlength="50" required>
+                           <input class="form-control form-control-phone" placeholder="Phone" name="phone"
                               type="number">
-                           <input class="form-control form-control-email" placeholder="Email" name="email" id="f-email"
-                              type="email" required="">
-                              <input class="form-control form-control-name" placeholder="Address" name="name" id="f-name"
-                              type="text" required="">
-                              <select class="form-control" name="state">
-                                 <option disabled> Choose State</option>
-                                 <option> Choose State</option>
+                           <input class="form-control form-control-email" placeholder="Email" name="email" 
+                              type="email" maxlength="100" required>
+                              <input class="form-control form-control-name" placeholder="Address" name="address"
+                              type="text" maxlength="100" required>
+                              <input class="form-control form-control-name" placeholder="Password" name="pass"
+                              type="password" required>
+                              <input class="form-control form-control-name" placeholder="Confirm Password" name="cPass"
+                              type="password" required>
+                              <select class="form-control" name="state" id="state" required>
+                                 <option>Choose State</option>
+                              <?php foreach($data['states'] as $key => $state): ?>
+                              <option value="<?=$state['state_id']?>"><?=$state['name']?></option>
+                              <?php endforeach ?>
                              </select>
-                             <select class="form-control" name="state">
-                                 <option disabled> Choose LGAe</option>
-                                 <option> Choose State</option>
+                             <select class="form-control" name="city" id="city" required>
+                                
                              </select>
 
-                           <button class="btns" type="submit"> Register Now</button>
+                           <button class="btns" name="register" type="submit"> Register Now</button>
 
                         </form><!-- form end-->
                      </div><!-- hero content end-->
@@ -44,12 +55,7 @@
          </div>
       </section>
       <?php include 'footer.php'?>
+      <script src="public/js/cities.js"></script>
 
       <!-- banner end-->
 
-      <style>
-
-
-
-
-      <style>    

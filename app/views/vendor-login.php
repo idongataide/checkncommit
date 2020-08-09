@@ -18,15 +18,22 @@
          </div><!-- Subpage title end -->
 	  </div><!-- Page Banner end -->
 	  <div class="col-md-6 mx-auto shadow mt-4 mb-4">
-				<form class="vlogin100-form validate-form mt-4">
+	  <?php if(isset($data['login'])){
+                $message = $data['login']['log']; $colour = $data['login']['colour'];
+        }
+                else $message =""; $colour = "";
+              ?> 
+				<form class="vlogin100-form validate-form mt-4" method="post">
+				<p style="color: <?=$colour?>;"><?=$message?></p>
+
 				<div class="col-lg-12">
 					<div class="vwrap-input100 validate-input m-b-26" data-validate="Username is required">
-						<input class="vinput100" type="text" name="username" placeholder="Enter username">
+						<input class="vinput100" type="email" name="email" placeholder="Enter email" required>
 					</div>
 				</div>
 					<div class="col-lg-12">
 					<div class="vwrap-input100 validate-input m-b-18" data-validate = "Password is required">
-						<input class="vinput100" type="password" name="pass" placeholder="Enter password">
+						<input class="vinput100" type="password" name="password" placeholder="Enter password" required>
 					</div>
 				</div>
 					<div class="flex-sb-m w-full p-b-30">
@@ -50,7 +57,7 @@
 						</div>
 
 					<div class="container-login100-form-btn">
-						<button class="vlogin100-form-btn">
+						<button class="vlogin100-form-btn" type="submit" name="login">
 							Login
 						</button>
 					</div>

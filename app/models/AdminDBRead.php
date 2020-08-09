@@ -12,14 +12,14 @@
 
 		function adminlogin($data){
 			$username = mysqli_real_escape_string($this->connection, $data['username']);
-			$password = mysqli_real_escape_string($this->connection, $data['password']);
-			$query = "select * from users where username = '{$username}'";
+			$password = mysqli_real_escape_string($this->connection, $data['pass']);
+			$query = "select * from admin where username = '{$username}'";
 			if($result = mysqli_query($this->connection, $query)){
 				if(mysqli_num_rows($result) > 0){
 					$arr = mysqli_fetch_assoc($result);
 					if(password_verify($password, $arr['password'])){
-						$_SESSION['admin_id'] = $arr['user_id']; 
-						$_SESSION['role'] = $arr['role']; 
+						$_SESSION['admin_id'] = $arr['admin_id']; 
+						$_SESSION['username'] = $arr['username']; 
 						return array('status' => 'success');
 						
 					}else{
