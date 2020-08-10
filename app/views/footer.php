@@ -1,4 +1,3 @@
-<?php include 'control.php'?>
     <!-- ts footer area start-->
     <div class="footer-area">
           <!-- ts-book-seat start-->
@@ -88,4 +87,4 @@
          </div>
 
       </div>
-      <!-- ts footer area end-->
+   

@@ -270,9 +270,9 @@ small device /mobile sm and large
   .header.header-transparent.nav-border .navbar {
     padding: 10px 0; }
   .header .navbar-light .navbar-toggler {
-    background: #e7015e;
+    background: orange;
     color: #fff;
-    border-color: #e7015e; }
+    border-color: orange; }
   .header ul.navbar-nav > li > a {
     line-height: 40px !important; }
     .header ul.navbar-nav > li > a i {
@@ -300,7 +300,7 @@ small device /mobile sm and large
   .navbar-brand img {
     max-width: 130px; }
   .header-transparent .navbar-toggler {
-    background: #e7015e;
+    background: orange;
     color: #fff; }
   .header-transparent .navbar-nav {
     background: #222;

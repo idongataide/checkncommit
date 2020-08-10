@@ -370,9 +370,6 @@
             <img class="shap2" src="public/images/shap/pricing_memphis1.png" alt="">
          </div>
       </section>
-      <!-- ts pricing end-->
+
+    
       <?php include 'footer.php'?>
-
- <style>
-
-   </style>
