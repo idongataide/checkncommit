@@ -23,7 +23,7 @@
                <div class="col-lg-8">
                   <div class="faq-content mb-70">
                      <h2 class="column-title">
-                        General FAQ's
+                        Business FAQ's
                      </h2>
                      <div class="panel-group faq-item" id="accordion" role="tablist" aria-multiselectable="true">
 
@@ -31,7 +31,7 @@
                            <div class="panel-heading" role="tab" id="headingOne">
                               <h4 class="panel-title">
                                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                          1. When does Exhibit Conference 2020 will occur?
+                                          1. What Checkncommit is all about?
                                        </a>
                               </h4>
                            </div>
@@ -47,7 +47,7 @@
                            <div class="panel-heading" role="tab" id="headingTwo">
                               <h4 class="panel-title">
                                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                          2. Where does Eventime take place?
+                                          2. What Checkncommit is all about?
                                        </a>
                               </h4>
                            </div>
@@ -64,7 +64,7 @@
                               <h4 class="panel-title">
                                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                           <i class="more-less glyphicon glyphicon-plus"></i>
-                                          3. How can I get the latest news on Exhibit 2020?
+                                          3. What Checkncommit is all about?
                                        </a>
                               </h4>
                            </div>
@@ -85,7 +85,7 @@
                               <div class="panel-heading" role="tab" id="headingFour">
                                  <h4 class="panel-title">
                                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                             4. How can my company sponsor this Event 2018?
+                                             4. What Checkncommit is all about?
                                           </a>
                                  </h4>
                               </div>
@@ -102,7 +102,7 @@
                   </div>
                   <div class="faq-content">
                         <h2 class="column-title">
-                           General FAQ's
+                           User's FAQ's
                         </h2>
                         <div class="panel-group faq-item" id="accordion1" role="tablist" aria-multiselectable="true">
    
@@ -110,7 +110,7 @@
                               <div class="panel-heading" role="tab" id="heading5">
                                  <h4 class="panel-title">
                                     <a role="button" class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                                             1. When does Exhibit Conference 2020 will occur?
+                                             1. What Checkncommit is all about?
                                           </a>
                                  </h4>
                               </div>
@@ -126,7 +126,7 @@
                               <div class="panel-heading" role="tab" id="heading6">
                                  <h4 class="panel-title">
                                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false" aria-controls="collapse6">
-                                             2. Where does Eventime take place?
+                                             2. What Checkncommit is all about?
                                           </a>
                                  </h4>
                               </div>
@@ -142,7 +142,7 @@
                               <div class="panel-heading" role="tab" id="heading7">
                                  <h4 class="panel-title">
                                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="false" aria-controls="collapse7">
-                                             3. How can I get the latest news on Exhibit 2020?
+                                             3. What Checkncommit is all about?
                                           </a>
                                  </h4>
                               </div>
@@ -159,7 +159,7 @@
                                  <div class="panel-heading" role="tab" id="heading8">
                                     <h4 class="panel-title">
                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse8" aria-expanded="false" aria-controls="collapse8">
-                                                4. How can my company sponsor this Event 2018?
+                                                4. What Checkncommit is all about?
                                              </a>
                                     </h4>
                                  </div>

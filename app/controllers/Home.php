@@ -74,6 +74,12 @@ class Home extends Controller
 		$data['title'] = 'Admin Login'; 
 		$this->view('admin-login', $data);
 	}
+	function business(){ 
+		$data = array();
+		
+		$data['title'] = 'Business Page';
+		$this->view('business', $data);
+	}
 	function businessRegistration(){
 		$data = array();
 		if(isset($_POST['login'])){
@@ -109,7 +115,7 @@ class Home extends Controller
 		$data['title'] = 'FAQ';
 		$this->view('faq', $data);
 	}
-	
+
 	function userlogin(){
 		$data = array();
 		if(isset($_POST['login'])){

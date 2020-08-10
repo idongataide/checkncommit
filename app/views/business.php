@@ -1,7 +1,7 @@
 <?php include 'control.php'?>
 <?php include 'header.php'?>
 <body>
-      <div id="page-banner-area" class="page-banner-area" style="background-image:url(images/hero_area/banner_bg.jpg)">
+      <div id="page-banner-area" class="page-banner-area" style="background-image:url(public/images/hero_area/banner_bg.jpg)">
          <!-- Subpage title start -->
          <div class="page-banner-title">
             <div class="text-center">
@@ -18,7 +18,7 @@
          </div><!-- Subpage title end -->
       </div><!-- Page Banner end -->
    
-      <section class="top-busibess" style="background-image:url(images/speakers/speaker_bg.png)">
+      <section class="top-busibess" style="background-image:url(public/images/speakers/speaker_bg.png)">
   <div class="container">
             <div class="row">
                <div class="col-lg-8 col-xs-12 col-sm-12 mx-auto">
@@ -37,7 +37,7 @@
     <div class="row">
       <div class="col-lg-6 col-md-6 col-xs-12">
       <span class="speaker-img">
-            <img src="images/business/biz.jpg" width="100%">          
+            <img src="public/images/business/biz.jpg" width="100%">          
       </span>
       </div>
       <div class="col-lg-6 col-md-6 col-xs-12">
@@ -81,14 +81,14 @@
                      <div class="row">
                         <div class="col-lg-6">
                            <div class="ts-speaker-popup-img">
-                              <img src="images/speakers/speaker1.jpg" alt="">
+                              <img src="public/images/speakers/speaker1.jpg" alt="">
                            </div>
                         </div><!-- col end-->
                         <div class="col-lg-6">
                            <div class="ts-speaker-popup-content">
-                              <h3 class="ts-title">David Robert</h3>
+                              <h3 class="ts-title">Business Name</h3>
                               <span class="speakder-designation">Cheif Architecture</span>
-                              <img class="company-logo" src="images/sponsors/sponsor-6.png" alt="">
+                              <img class="company-logo" src="public/images/sponsors/sponsor-6.png" alt="">
                               <p>
                                  World is committed to making participation in the event a harass ment free experience
                                  for everyone, regardless of level experience gender, gender identity and expression
@@ -96,30 +96,7 @@
                               <h4 class="session-name">
                                  Sessions by David
                               </h4>
-                              <div class="row">
-                                 <div class="col-lg-6">
-                                    <div class="speaker-session-info">
-                                       <h4>Day 1</h4>
-                                       <span>
-                                                   10.30 - 11.30 am
-                                             </span>
-                                       <p>
-                                          Marketing Matters
-                                       </p>
-                                    </div>
-                                 </div>
-                                 <div class="col-lg-6">
-                                    <div class="speaker-session-info">
-                                       <h4>Day 1</h4>
-                                       <span>
-                                                      10.30 - 11.30 am
-                                                </span>
-                                       <p>
-                                          Marketing Matters
-                                       </p>
-                                    </div>
-                                 </div>
-                              </div>
+                              
                               <div class="ts-speakers-social">
                                  <a href="#"><i class="fa fa-facebook"></i></a>
                                  <a href="#"><i class="fa fa-twitter"></i></a>
@@ -139,9 +116,7 @@
       </section>
       <!-- ts speaker end-->
  
-
-           
-            <section class="top-busibess" style="background-image:url(images/speakers/speaker_bg.png)">
+ <section class="top-busibess" style="background-image:url(public/images/speakers/speaker_bg.png)">
   <div class="container">
             <div class="row">
                <div class="col-lg-8 col-xs-12 col-sm-12 mx-auto">
@@ -160,7 +135,7 @@
     <div class="row">
       <div class="col-lg-6 col-md-6 col-xs-12">
       <span class="speaker-img">
-            <img src="images/business/biz.jpg" width="100%">          
+            <img src="public/images/business/biz.jpg" width="100%">          
       </span>
       </div>
       <div class="col-lg-6 col-md-6 col-xs-12">
@@ -204,14 +179,14 @@
                      <div class="row">
                         <div class="col-lg-6">
                            <div class="ts-speaker-popup-img">
-                              <img src="images/speakers/speaker1.jpg" alt="">
+                              <img src="public/images/speakers/speaker1.jpg" alt="">
                            </div>
                         </div><!-- col end-->
                         <div class="col-lg-6">
                            <div class="ts-speaker-popup-content">
-                              <h3 class="ts-title">David Robert</h3>
+                              <h3 class="ts-title">Business Name</h3>
                               <span class="speakder-designation">Cheif Architecture</span>
-                              <img class="company-logo" src="images/sponsors/sponsor-6.png" alt="">
+                              <img class="company-logo" src="public/images/sponsors/sponsor-6.png" alt="">
                               <p>
                                  World is committed to making participation in the event a harass ment free experience
                                  for everyone, regardless of level experience gender, gender identity and expression

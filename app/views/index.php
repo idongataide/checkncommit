@@ -104,7 +104,7 @@
 </div>
 
 
-
+<a class="d-none d-sm-block" href="#" target="_blank" style="webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);-moz-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);-o-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);z-index:230;position:fixed;bottom:50%; top:40%;left:0px;width:60px;height:160px;background-image:url(public/images/sidelogo.png);background-position:center center;backgrond-size:cover;background-repeat:no-repeat;cursor:pointer"></a>
 <section class="ftco-section ftco-no-pt ftco-no-pb">
 <div class="container">
 <div class="row">
@@ -112,7 +112,7 @@
 <div class="category-wrap">
 <div class="row no-gutters">
 <div class="col-md-4">
-<div class="top-category text-center no-border-left">
+<div class="top-category text-center no-border-left"  style="background: #96d50a !important;color:#fff">
 <h3><a href="#">Website &amp; Software</a></h3>
 <span class="icon flaticon-contact"></span>
 <p><span class="number">143</span> <span>Open position</span></p>
@@ -127,7 +127,7 @@
 </div>
 
 <div class="col-md-4">
-<div class="top-category text-center">
+<div class="top-category text-center" style="background: #238b53 !important;color:#fff">
  <h3><a href="#">Health &amp; Hospital</a></h3>
 <span class="icon flaticon-stethoscope"></span>
 <p><span class="number">143</span> <span>Open position</span></p>
@@ -155,7 +155,7 @@
 <?php for($i=0; $i<4;$i++){?>
   <div class="col-lg-6 col-md-6 col-xs-12 p-0 m-0">
         <div class="shadow">
-  <h2 class="head">LARAVA MULTIPURPOSE HALL</h2>
+  <h2 class="head">Business Name</h2>
     <div class="row">
       <div class="col-lg-6 col-md-6 col-xs-12">
       <span class="speaker-img">
@@ -167,7 +167,8 @@
           <small class="smallobj">
             Lagos - Apapa 
           </small>
-            <div class="descp pl-3 pr-3">Giving you a best experience Giving you a best experienceGiving you a best experience</div>
+            <div class="descp pl-3 pr-3">Giving you a best experience Giving you a best experience 
+              Giving you a best experience</div>
             <p align="right"><a href="#popup_1" class="view-speaker ts-image-popup" data-effect="mfp-zoom-in"><i class="icon icon-plus"></i> See Details</a>&nbsp;&nbsp;&nbsp;</p>
         </span>
       </div>
@@ -234,45 +235,21 @@
                      <div class="row">
                         <div class="col-lg-6">
                            <div class="ts-speaker-popup-img">
-                              <img src="public/images/speakers/speaker1.jpg" alt="">
+                              <img src="public/images/business/ads.jpg" alt="">
                            </div>
                         </div><!-- col end-->
                         <div class="col-lg-6">
                            <div class="ts-speaker-popup-content">
-                              <h3 class="ts-title">David Robert</h3>
-                              <span class="speakder-designation">Cheif Architecture</span>
+                              <h3 class="ts-title">Business Name</h3>
+                              <span class="speakder-designation">Address</span>
                               <img class="company-logo" src="public/images/sponsors/sponsor-6.png" alt="">
                               <p>
                                  World is committed to making participation in the event a harass ment free experience
                                  for everyone, regardless of level experience gender, gender identity and expression
                               </p>
                               <h4 class="session-name">
-                                 Sessions by David
-                              </h4>
-                              <div class="row">
-                                 <div class="col-lg-6">
-                                    <div class="speaker-session-info">
-                                       <h4>Day 1</h4>
-                                       <span>
-                                                   10.30 - 11.30 am
-                                             </span>
-                                       <p>
-                                          Marketing Matters
-                                       </p>
-                                    </div>
-                                 </div>
-                                 <div class="col-lg-6">
-                                    <div class="speaker-session-info">
-                                       <h4>Day 1</h4>
-                                       <span>
-                                                      10.30 - 11.30 am
-                                                </span>
-                                       <p>
-                                          Marketing Matters
-                                       </p>
-                                    </div>
-                                 </div>
-                              </div>
+                                 Follow Us at
+                              </h4>                            
                               <div class="ts-speakers-social">
                                  <a href="#"><i class="fa fa-facebook"></i></a>
                                  <a href="#"><i class="fa fa-twitter"></i></a>
@@ -285,7 +262,7 @@
                      </div><!-- row end-->
                   </div><!-- popup end-->
                </div> <!-- col end-->
-                         
+        
             </div><!-- row end-->
          </div><!-- container end-->
 
@@ -298,38 +275,12 @@
          <!-- shap img end-->
       </section>
 
-      <!-- ts experience start-->
-      <section id="ts-experiences" class="ts-experiences" style="background-image:url(public/images/speakers/speaker_bg.png);">
-         <div class="container-fluid">
-            <div class="row">
-               <div class="col-lg-6 no-padding">
-                  <div class="exp-img" style="background-image:url(public/images/cta_img.png)">
-                     <!-- <img class="img-fluid" src="public/images/cta_img.jpg" alt=""> -->
-                  </div>
-               </div><!-- col end-->
-               <div class="col-lg-6 no-padding align-self-center wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="500ms">
-                  <div class="ts-exp-wrap">
-                     <div class="ts-exp-content">
-                        <h2 class="column-title">
-                           <span>Get Your Business Seen</span>
-                           Advertise your Business With Us at a very cheap rate
-                        </h2>
-                        <p>
-                        <a href="#" class="btn pricing-btn">Buy Ticket</a>
-
-                        </p>
-                     </div>
-                  </div>
-
-               </div><!-- col end-->
-            </div><!-- row end-->
-         </div><!-- container fluid end-->
-      </section>
-      <!-- ts experience end-->
+  <div id="create-dp-banner-pc" onclick="location.replace('#')" style="webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);-moz-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);-o-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);z-index:999;cursor:pointer;position:fixed;top:18px;right:0px;width:60px;height:180px;background-image:url(public/images/sidelogo.png);background-position:center center;backgrond-size:cover;"></div>
 
       <!-- ts pricing start-->
-      <section class="ts-pricing gradient" style="background-image: url(public/images/pricing/pricing_img.jpg)">
-         <div class="container">
+      <section class="ts-pricing gradient pos-relative" style="background-image: url(public/images/pricing/pricing_img.jpg)">
+         <div class="shape2 bg--white"></div>
+         <div class="container mt-5">
             <div class="row">
                <div class="col-lg-12">
                   <h2 class="section-title white">
@@ -348,77 +299,71 @@
                         <div class="ts-pricing-header">
                            <h2 class="ts-pricing-name">Stage One</h2>
                            <h3 class="ts-pricing-price">
-                              <span class="currency">N</span>50,000
+                              <span class="currency">N</span>5,000
                            </h3>
                         </div>
                         <div class="ts-pricing-progress">
-                           <p class="amount-progres-text">Available tickets for this price</p>
+                           <p class="amount-progres-text">Available for Suscription</p>
                            <div class="ts-progress">
                               <div class="ts-progress-inner" style="width: 100%"></div>
                            </div>
-                           <p class="ts-pricing-value">500/500</p>
                         </div>
                         <div class="promotional-code">
-                           <a href="#" class="btn pricing-btn">Buy Ticket</a>
-                           <p class="vate-text">All prices exclude 25% VAT</p>
+                           <a href="#" class="btn pricing-btn">Subscribe</a>
                         </div>
                      </div><!-- ts pricing box-->
                      <img class="pricing-dot1 " src="public/images/pricing/dot.png" alt="">
                   </div>
                </div><!-- col end-->
-               <div class="col-lg-4 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="500ms">
+               <div class="col-lg-4 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="400ms">
                   <div class="pricing-item">
                      <img class="pricing-dot " src="public/images/pricing/dot.png" alt="">
                      <div class="ts-pricing-box">
-                        <span class="big-dot"></span>
+
                         <div class="ts-pricing-header">
-                           <h2 class="ts-pricing-name">Regular</h2>
+                           <h2 class="ts-pricing-name">Stage One</h2>
                            <h3 class="ts-pricing-price">
-                           <span class="currency">N</span>580,000
+                              <span class="currency">N</span>10,000
                            </h3>
                         </div>
                         <div class="ts-pricing-progress">
+                           <p class="amount-progres-text">Available for Suscription</p>
                            <div class="ts-progress">
-                              <div class="ts-progress-inner" style="width: 75%"></div>
+                              <div class="ts-progress-inner" style="width: 100%"></div>
                            </div>
-                           <p class="ts-pricing-value">350/500</p>
                         </div>
                         <div class="promotional-code">
-                           <p class="promo-code-text">Enter Promotional Code</p>
-                           <a href="#" class="btn pricing-btn">Buy Ticket</a>
-                           <p class="vate-text">All prices exclude 25% VAT</p>
+                           <a href="#" class="btn pricing-btn">Subscribe</a>
                         </div>
                      </div><!-- ts pricing box-->
                      <img class="pricing-dot1 " src="public/images/pricing/dot.png" alt="">
                   </div>
                </div><!-- col end-->
-               <div class="col-lg-4 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="600ms">
+               <div class="col-lg-4 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="400ms">
                   <div class="pricing-item">
                      <img class="pricing-dot " src="public/images/pricing/dot.png" alt="">
                      <div class="ts-pricing-box">
-                        <span class="big-dot"></span>
+
                         <div class="ts-pricing-header">
-                           <h2 class="ts-pricing-name">Platinum</h2>
+                           <h2 class="ts-pricing-name">Stage Three</h2>
                            <h3 class="ts-pricing-price">
-                           <span class="currency">N</span>580,000
+                              <span class="currency">N</span>15,000
                            </h3>
                         </div>
                         <div class="ts-pricing-progress">
-                           <p class="amount-progres-text">Available tickets for this price</p>
+                           <p class="amount-progres-text">Available for Suscription</p>
                            <div class="ts-progress">
-                              <div class="ts-progress-inner" style="width: 50%"></div>
+                              <div class="ts-progress-inner" style="width: 100%"></div>
                            </div>
-                           <p class="ts-pricing-value">250/500</p>
                         </div>
                         <div class="promotional-code">
-                           <p class="promo-code-text">Enter Promotional Code</p>
-                           <a href="#" class="btn pricing-btn">Buy Ticket</a>
-                           <p class="vate-text">All prices exclude 25% VAT</p>
+                           <a href="#" class="btn pricing-btn">Subscribe</a>
                         </div>
                      </div><!-- ts pricing box-->
                      <img class="pricing-dot1 " src="public/images/pricing/dot.png" alt="">
                   </div>
                </div><!-- col end-->
+
             </div>
          </div><!-- container end-->
          <div class="speaker-shap wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="400ms">
@@ -428,4 +373,6 @@
       <!-- ts pricing end-->
       <?php include 'footer.php'?>
 
- 
+ <style>
+
+   </style>
