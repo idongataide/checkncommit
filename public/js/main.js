@@ -29,19 +29,33 @@ jQuery(function ($) {
 
    }
 
-   $(document).ready(function() {
+
  
     $("#owl-demo").owlCarousel({
-   
-        autoPlay: 3000, //Set AutoPlay to 3 seconds
-   
-        items : 5,
-        itemsDesktop : [1199,3],
-        itemsDesktopSmall : [979,3]
-   
+      autoplay: true,
+      autoPlay:2000,
+      autoHeight: true,
+      goToFirst : true,
+      goToFirstSpeed : 1000,
+      loop:true,
+      slideSpeed:	100,
+			items:2,
+			nav: false,
+			dots: true,
+			responsive:{
+				0:{
+					items: 1
+				},
+				600:{
+					items: 3
+				},
+				1000:{
+					items: 5
+				}
+			}
     });
    
-  });
+
    /*==========================================================
      funfact 
      ======================================================================*/

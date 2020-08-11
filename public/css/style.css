@@ -2289,7 +2289,8 @@ img.pull-right {
   .ts-speaker .ts-title {
     margin-bottom: 5px; }
     .ts-speaker .ts-title a {
-      color: #222222; }
+      color: #222222;
+      font-weight: 800; }
   .ts-speaker:hover .speaker-img img {
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
@@ -3037,9 +3038,10 @@ img.pull-right {
   .page-banner-title h2 {
     color: #fff;
     font-size: 60px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-weight:600;
     margin-bottom: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
    }
   .page-banner-title .breadcrumb {
     background: none;
@@ -3503,17 +3505,17 @@ faq-item
         right: 20px;
         top: 0;
         font-size: 12px;
-        content: '\e94c';
-        font-family: 'font-awesome'; }
+        content: '\f068';
+        font-family: 'FontAwesome'; }
       .faq-item .faq-list h4 a.collapsed:before {
-        content: '\f09a'; }
+        content: '\f067'; }
       .faq-item .faq-list h4 a[aria-expanded="true"] {
-        background: #0c3b2e;
+        background: #068030;
         color: #fff;
-        border-color: #0c3b2e; }
+        border-color: #fff; }
   .faq-item .faq-list .panel-collapse {
     color: #fff;
-    padding: 0 20px 20px; }
+    padding: 15px 20px 20px; }
     .faq-item .faq-list .panel-collapse.show {
       background: #0c3b2e; }
 

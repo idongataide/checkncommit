@@ -10,8 +10,8 @@
 <div class="row d-md-flex no-gutters slider-text align-items-center justify-content-center">
 <div class="col-md-10  align-items-center mx-auto ftco-animate">
 <div class="text text-center pt-5 mt-5">
-<p class="mb-4">Find Job, Employment, and Career Opportunities</p>
-<h1 class="mb-5 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="600ms">The Eassiest Way to Get Your New Job</h1>
+<p class="mb-4">Verify businesses and products</p>
+<h1 class="mb-5 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="600ms">The surest place to verify Legitimate businesses</h1>
 <div class="ftco-counter ftco-no-pt ftco-no-pb">
 <div class="row">
 <div class="col-md-6 d-flex justify-content-center counter-wrap ftco-animate">
@@ -146,7 +146,7 @@
                <div class="col-lg-8 col-xs-12 col-sm-12 mx-auto">
                   <h2 class="section-title text-center">
                      <span>Top Ranked Business For the week</span>
-                     Our Market Place
+                     Business Area
                   </h2>
                </div><!-- col end-->
             </div><!-- row end-->
@@ -200,6 +200,7 @@
 </div>
 </div> 
 </section>
+
     <section id="ts-speakers" class="ts-speakers speaker-classic" style="background-image:url(public/images/speakers/speaker_bg.png)">
          <div class="container">
             <div class="row">
@@ -210,10 +211,9 @@
                   </h2>
                </div><!-- col end-->
             </div><!-- row end-->
-            <div class="row">
-              <?php for($i=0; $i<4; $i++) {?>
-            <div class="col-lg-3 col-md-6">
-                  <div class="ts-speaker">
+            <div  id="owl-demo" class="owl-carousel owl-theme">
+              <?php for($i=0; $i<9; $i++) {?>
+                  <div class="ts-speaker p-2">
                      <div class="speaker-img">
                         <img class="img-fluid" src="public/images/business/ads.jpg" alt="">
                         <a href="#popup_1" class="view-speaker ts-image-popup" data-effect="mfp-zoom-in">
@@ -226,9 +226,9 @@
                            N, 5000
                         </p>
                      </div>
-                  </div> </div>
+                  </div> 
               <?php }?>
-
+              </div> 
                   <!-- popup start-->
                   <div id="popup_1" class="container ts-speaker-popup mfp-hide">
                      <div class="row">
@@ -361,7 +361,7 @@
                      </div><!-- ts pricing box-->
                      <img class="pricing-dot1 " src="public/images/pricing/dot.png" alt="">
                   </div>
-               </div><!-- col end-->
+               </div><!-- col end--> 
 
             </div>
          </div><!-- container end-->
@@ -369,6 +369,5 @@
             <img class="shap2" src="public/images/shap/pricing_memphis1.png" alt="">
          </div>
       </section>
+ 
 
-    
-      <?php include 'footer.php'?>

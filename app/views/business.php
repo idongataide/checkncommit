@@ -1,4 +1,3 @@
-<?php include 'control.php'?>
 <?php include 'header.php'?>
 <body>
       <div id="page-banner-area" class="page-banner-area" style="background-image:url(public/images/hero_area/banner_bg.jpg)">
@@ -81,7 +80,7 @@
                      <div class="row">
                         <div class="col-lg-6">
                            <div class="ts-speaker-popup-img">
-                              <img src="public/images/speakers/speaker1.jpg" alt="">
+                              <img src="public/images/speakers/biz.jpg" alt="">
                            </div>
                         </div><!-- col end-->
                         <div class="col-lg-6">

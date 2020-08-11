@@ -1,4 +1,3 @@
-<?php include 'control.php'?>
 <?php include 'header.php'?>
 
       <div id="page-banner-area" class="page-banner-area" style="background-image:url(public/images/hero_area/banner_bg.jpg)">

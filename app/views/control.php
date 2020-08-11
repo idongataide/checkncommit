@@ -4,7 +4,7 @@
 	<title>ChecknCommit - <?=$data['title']?></title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/png" href="public/images/icons/favicon.ico"/>
+	<link rel="icon" type="image/png" href="public/images/logos/icon.png"/>
 	<link rel="stylesheet" type="text/css" href="public/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="public/css/animate.css">
 	<link rel="stylesheet" href="public/css/owl.carousel.min.css">

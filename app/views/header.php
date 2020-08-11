@@ -14,10 +14,10 @@
                <div class="collapse navbar-collapse" id="navbarNavDropdown">
                   <ul class="navbar-nav ml-auto">
                      <li class="nav-item active">
-                        <a href="index" class="">Home</a>                     
+                        <a href="review" class="">Review a Business`</a>                     
                      </li>
                      <li class="dropdown nav-item">
-                        <a href="#" class="" data-toggle="dropdown">About <i class="fa fa-angle-down"></i></a>
+                        <a href="#" class="" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu" role="menu">
                            <li><a href="about">About Us</a></li>
                            <li><a href="faq">FAQ</a></li>

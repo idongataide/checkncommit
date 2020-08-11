@@ -1,4 +1,3 @@
-<?php include 'control.php'?> 
 <?php include 'header.php'?>
 
    <!-- banner start-->

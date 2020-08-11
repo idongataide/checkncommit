@@ -80,6 +80,12 @@ class Home extends Controller
 		$data['title'] = 'Business Page';
 		$this->view('business', $data);
 	}
+	function review(){ 
+		$data = array();
+		
+		$data['title'] = 'Business Rating Page';
+		$this->view('review', $data);
+	}
 	function businessRegistration(){
 		$data = array();
 		if(isset($_POST['login'])){
