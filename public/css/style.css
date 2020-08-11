@@ -2521,7 +2521,7 @@ img.pull-right {
   .top-category p {
     color: #fff }
   .top-category.active, .top-category:hover {
-    background: #fdab44;
+    background: #fc6e20;
     border-left: none; }
     .top-category.active h3 a, .top-category:hover h3 a {
       color: #fff; }

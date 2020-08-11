@@ -1,7 +1,7 @@
 Options -Indexes
 RewriteEngine On
 
-RewriteBase /checkncommit
+RewriteBase /
 
 #RewriteCond %{REQUEST_METHOD} POST
 
