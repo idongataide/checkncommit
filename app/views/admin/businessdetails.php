@@ -4,7 +4,7 @@
          <div class="page-header row no-gutters py-4">
               <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
                 <span class="text-uppercase page-subtitle">Details</span>
-                <h3 class="page-title">Store Name Profile</h3>
+                <h3 class="page-title"><?=$data['business']['store_name']?> Profile</h3>
               </div>
             </div>
             <!-- End Page Header -->
@@ -13,7 +13,7 @@
               <div class="col-lg-4">
                 <div class="card card-small mb-4 pt-3">
                   <div class="card-header border-bottom text-center p-5" style="height:250px;">                   
-                      <img class="img img-fluid" src="../images/speakers/speaker1.jpg" alt="User Avatar" width="100%" height="100%"> 
+                      <img class="img img-fluid" src="public/images/speakers/speaker1.jpg" alt="User Avatar" width="100%" height="100%"> 
                   </div>
                   <ul class="list-group list-group-flush">
                   <li class="list-group-item p-4">
@@ -45,28 +45,24 @@
                             <div class="form-row">
                               <div class="col-md-6">
                                 <strong class="text-muted d-block mb-2">First Name</strong>
-                                <span> Samuel </span> 
+                                <span> <?=$data['business']['business_fname']?> </span> 
                                 </div>
-                              <div class="form-group col-md-6">
-                                 <strong class="text-muted d-block mb-2">Middle Name</strong>
-                                <span> John</span> 
-                            </div>
                         </div>
                             <div class="form-row">
                               <div class="col-md-6">
                                  <strong class="text-muted d-block mb-2">Last Name</strong>
-                                 <span> Samuel </span> 
+                                 <span> <?=$data['business']['business_lname']?></span> 
                             </div>
                             <div class="col-md-6 form-group">
                                  <strong class="text-muted d-block mb-2">Business Name</strong>
-                                 <span> Sammitex Global</span> 
+                                 <span>  <?=$data['business']['store_name']?></span> 
                           </div>                               
                           </div>
 
                           <div class="form-row">
                               <div class="col-md-6">
                                  <strong class="text-muted d-block mb-2">Business Address</strong>
-                                 <span> Samuel </span> 
+                                 <span> <?=$data['business']['business_address'].', '.$data['business']['city_name'].', '.$data['business']['state_name'] ?></span> 
                             </div>
                             <div class="col-md-6">
                                  <strong class="text-muted d-block mb-2">Location</strong>
@@ -75,19 +71,19 @@
                           </div> 
                           <div class="form-row">
                              <div class="border-bottom p-3" style="width:120px;">                   
-                                <img class="img img-fluid" src="../images/speakers/speaker1.jpg" alt="User Avatar" width="100%" height="100%"> 
+                                <img class="img img-fluid" src="public/images/speakers/speaker1.jpg" alt="User Avatar" width="100%" height="100%"> 
                             </div>
                             <div class="border-bottom p-3" style="width:120px;">                   
-                                <img class="img img-fluid" src="../images/speakers/speaker1.jpg" alt="User Avatar" width="100%" height="100%"> 
+                                <img class="img img-fluid" src="public/images/speakers/speaker1.jpg" alt="User Avatar" width="100%" height="100%"> 
                             </div>
                             <div class="border-bottom p-3" style="width:120px;">                   
-                                <img class="img img-fluid" src="../images/speakers/speaker1.jpg" alt="User Avatar" width="100%" height="100%"> 
+                                <img class="img img-fluid" src="public/images/speakers/speaker1.jpg" alt="User Avatar" width="100%" height="100%"> 
                             </div>
                             <div class="border-bottom p-3" style="width:120px;">                   
-                                <img class="img img-fluid" src="../images/speakers/speaker1.jpg" alt="User Avatar" width="100%" height="100%"> 
+                                <img class="img img-fluid" src="public/images/speakers/speaker1.jpg" alt="User Avatar" width="100%" height="100%"> 
                             </div>
                             <div class="border-bottom p-3" style="width:120px;">                   
-                                <img class="img img-fluid" src="../images/speakers/speaker1.jpg" alt="User Avatar" width="100%" height="100%"> 
+                                <img class="img img-fluid" src="public/images/speakers/speaker1.jpg" alt="User Avatar" width="100%" height="100%"> 
                             </div>                            
                           </div>  
                           </div> 

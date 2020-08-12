@@ -24,7 +24,7 @@
                                             <div class="widget-subheading">No. of reviewers</div>
                                         </div>
                                         <div class="widget-content-right">
-                                            <div class="widget-numbers text-white"><span>0</span></div>
+                                            <div class="widget-numbers text-white"><span><?=$data['user_count']['users']?></span></div>
                                         </div>
                                     </div>
                                 </div>
@@ -37,7 +37,7 @@
                                             <div class="widget-subheading">Total Buisnesses Registered</div>
                                         </div>
                                         <div class="widget-content-right">
-                                            <div class="widget-numbers text-white"><span>0</span></div>
+                                            <div class="widget-numbers text-white"><span><?=$data['business_count']['business']?></span></div>
                                         </div>
                                     </div>
                                 </div>

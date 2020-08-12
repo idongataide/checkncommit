@@ -4,7 +4,7 @@
                     <div class="card mb-3">
                             <div class="card-header-tab card-header">
                                 <div class="card-header-title font-size-lg text-capitalize font-weight-normal"><i
-                                        class="pe-7s-menu icon-gradient bg-mean-fruit"> </i>Registered Users
+                                        class="pe-7s-menu icon-gradient bg-mean-fruit"> </i>Registered Businesses
                                 </div>
                             </div>
                             <div class="card-body">
@@ -13,7 +13,9 @@
                                         <tr>
                                             <th>S/n</th>
                                             <th>Name</th>
+                                            <th>Email</th>
                                             <th>Phone Number</th>                                            
+                                            <th>Address</th>
                                             <th>Date</th>
                                             <th>Status</th>
                                             <th>Details</th>
@@ -21,31 +23,32 @@
                                     </thead>                                   
                                       
                                         <tbody>
-                                        <?php for($i=0; $i<20; $i++){?>
+                                        <?php foreach ($data['businesses'] as $key => $business) {?>
                                             <tr>
-                                            <td class="text-center text-muted">1</td>
+                                            <td class="text-center text-muted"><?=$key + 1 ?></td>
                                                 <td>
                                                     <div class="widget-content p-0">
                                                         <div class="widget-content-wrapper">
                                                             <div class="widget-content-left mr-3">
                                                                 <div class="widget-content-left">
-                                                                    <img width="40" class="rounded-circle" src="../images/avatars/1.jpg" alt="">
+                                                                    <img width="40" class="rounded-circle" src="public/images/avatars/1.jpg" alt="">
                                                                 </div>
                                                             </div>
                                                             <div class="widget-content-left flex2">
-                                                                <div class="widget-heading">John Doe</div>
-                                                                <div class="widget-subheading opacity-7">Web Developer</div>
+                                                                <div class="widget-heading"><?=$business['store_name']?></div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td class="text-center text-muted">090090987</td>
-                                                <td class="text-center">Nigeria</td>
+                                                <td class="text-center text-muted"><?=$business['business_email']?></td>
+                                                <td class="text-center text-muted"><?=$business['business_phone']?></td>
+                                                <td class="text-center"><?=$business['business_address'].', '.$business['city_name'].', '.$business['state_name']?></td>
+                                                <td class="text-center text-muted"><?=$business['date']?></td>
                                                 <td class="text-center">
-                                                    <div class="badge badge-success">Pending</div>
+                                                    <div class="badge badge-success"><?=$business['status']?></div>
                                                 </td>
                                                 <td class="text-center">
-                                                    <a href="businessdetails">
+                                                    <a href="admin/businessdetails/<?=$business['business_id']?>">
                                                     <button type="button" id="PopoverCustomT-1" class="btn btn-primary btn-sm">Details</button>
                                                    </a>
                                                 </td>

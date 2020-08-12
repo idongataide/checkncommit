@@ -25,7 +25,7 @@
               ?> 
                 <div class="col-md-8 mx-auto shadow"> 
 					<p style="color: <?=$colour?>;"><?=$message?></p>
-				<form class="vlogin100-form">
+				<form class="vlogin100-form" method="POST">
                 <div class="col-lg-6">
 					<div class="vwrap-input100 validate-input m-b-26">
 						<input class="vinput100" type="text" name="business_fname" placeholder="Enter First Name" maxlength="50" required>
@@ -67,28 +67,22 @@
 					</div>
                  </div>
                  <div class="col-lg-6">
-					<div class="vwrap-input100 validate-input m-b-26">
-					<select class="vinput100 form-control" name="business_city" id="city">
-					</select>
-					</div>
-                 </div>
-                 <div class="col-lg-6">
 					<div class="vwrap-input100 validate-input m-b-26" >
-						<select class="vinput100 form-control" name="business_state" id="state">
+						<select class="vinput100 form-control" name="business_state" id="state" required>
 						<option> --Select a State--</option>
 						<?php foreach($data['states'] as $key => $state): ?>
-						<option value="<?=$state['state_id']?>"><?=$state['name']?></option>
+						<option value="<?=$state['state_id']?>"><?=$state['state_name']?></option>
 						<?php endforeach ?>
                         </select>
 					</div>
                  </div>
-					<div class="flex-sb-m w-full p-b-30">
-						<div class="vcontact100-form-checkbox">
-							<input class="vinput-checkbox100" id="ckb1" type="checkbox" name="remember-me" required>
-							<label class="vlabel-checkbox100" for="ckb1">
-								Remember me
-							</label>
-						</div>
+				 
+                 <div class="col-lg-6">
+					<div class="vwrap-input100 validate-input m-b-26">
+					<select class="vinput100 form-control" name="business_city" id="city" required>
+					</select>
+					</div>
+                 </div>
 
 						<div>
 							<a href="#" class="txt1">
@@ -99,7 +93,7 @@
 
 					<div class="container-login100-form-btn">
 						<button class="vlogin100-form-btn" type="submit" name="register">
-							Registration
+							Register
 						</button>
 					</div>
 				</form>

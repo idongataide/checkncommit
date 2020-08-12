@@ -37,7 +37,7 @@
                               <select class="form-control" name="state" id="state" required>
                                  <option>Choose State</option>
                               <?php foreach($data['states'] as $key => $state): ?>
-                              <option value="<?=$state['state_id']?>"><?=$state['name']?></option>
+                              <option value="<?=$state['state_id']?>"><?=$state['state_name']?></option>
                               <?php endforeach ?>
                              </select>
                              <select class="form-control" name="city" id="city" required>

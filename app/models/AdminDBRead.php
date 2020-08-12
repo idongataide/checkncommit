@@ -35,20 +35,32 @@
 			return array('status' => 'failed', 'log' => mysqli_error($this->connection));
 		}
 		function getUsers(){
-			$query = mysqli_query($this->connection, "select * from users ");
+			$query = mysqli_query($this->connection, "select * from users left join states on users.user_state = states.state_id 
+			left join cities on users.user_city = cities.city_id");
 			return $this->getStructureData($query);
+		}
+		function getUser($id){
+			$query = mysqli_query($this->connection, "select * from users left join states on users.user_state = states.state_id 
+			left join cities on users.user_city = cities.city_id where user_id = '$id'");
+			return mysqli_fetch_assoc($query);
 		}
 		function getUserCount(){
 			$query = mysqli_query($this->connection, "select count(user_id) as users from users ");
+			return mysqli_fetch_assoc($query);
+		}
+		function getBusinesses(){
+			$query = mysqli_query($this->connection, "select * from  business left join states on business.business_state = states.state_id 
+			left join cities on business.business_city = cities.city_id");
 			return $this->getStructureData($query);
 		}
-		function getProductCount(){
-			$query = mysqli_query($this->connection, "select count(prod_id) as product from products ");
-			return $this->getStructureData($query);
+		function getBusiness($id){
+			$query = mysqli_query($this->connection, "select * from  business left join states on business.business_state = states.state_id 
+			left join cities on business.business_city = cities.city_id where business_id = '$id'");
+			return mysqli_fetch_assoc($query);
 		}
-		function getOrderCount(){
-			$query = mysqli_query($this->connection, "select count(order_id) as orders from orders ");
-			return $this->getStructureData($query);
+		function getBusinessCount(){
+			$query = mysqli_query($this->connection, "select count(business_id) as business from business ");
+			return mysqli_fetch_assoc($query);
 		}
 		function getProducts(){
 			$query = mysqli_query($this->connection, "select * from products ");
@@ -59,7 +71,7 @@
 			return $this->getStructureData($query);
 		}
 		function getProfile($id){
-			$query = mysqli_query($this->connection, "select * from users where user_id = '$id'");
+			$query = mysqli_query($this->connection, "select * from admin where admin_id = '$id'");
 			return mysqli_fetch_assoc($query);
 		}
 		function getSales(){

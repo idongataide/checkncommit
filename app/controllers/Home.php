@@ -15,6 +15,7 @@ class Home extends Controller
 	function index(){
 		$data = array();
 		$data['title'] = 'Home';
+		//var_dump($_SESSION); die();
 		$this->view('index', $data);
 	}
 	function about(){ 
@@ -115,7 +116,11 @@ class Home extends Controller
 		$data['title'] = 'FAQ';
 		$this->view('faq', $data);
 	}
-
+	function logout(){
+		session_destroy();
+		header('Location: ../checkncommit');
+		die();
+	}
 	function userlogin(){
 		$data = array();
 		if(isset($_POST['login'])){

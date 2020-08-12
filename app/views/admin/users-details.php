@@ -4,7 +4,7 @@
          <div class="page-header row no-gutters py-4">
               <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
                 <span class="text-uppercase page-subtitle">Overview</span>
-                <h3 class="page-title">User Profile</h3>
+                <h3 class="page-title"><?=$data['user']['username']?> Profile</h3>
               </div>
             </div>
             <!-- End Page Header -->
@@ -13,12 +13,12 @@
               <div class="col-lg-4">
                 <div class="card card-small mb-4 pt-3">
                   <div class="card-header border-bottom text-center p-5" style="height:250px;">                   
-                      <img class="img img-fluid" src="../images/speakers/speaker1.jpg" alt="User Avatar" width="100%" height="100%"> 
+                      <img class="img img-fluid" src="public/images/speakers/speaker1.jpg" alt="User Avatar" width="100%" height="100%"> 
                   
                   </div>
                   <ul class="list-group list-group-flush">                   
                     <li class="list-group-item p-4">
-                      <strong class="text-muted d-block mb-2">Username</strong>
+                      <strong class="text-muted d-block mb-2"><?=$data['user']['username']?></strong>
                     </li>
                   </ul>
                 </div>
@@ -35,42 +35,38 @@
                             <div class="form-row">
                               <div class="col-md-6">
                                 <strong class="text-muted d-block mb-2">First Name</strong>
-                                <span> Samuel </span> 
+                                <span> <?=$data['user']['fname']?> </span> 
                                 </div>
-                              <div class="form-group col-md-6">
-                                 <strong class="text-muted d-block mb-2">Middle Name</strong>
-                                <span> John</span> 
-                            </div>
                         </div>
                             <div class="form-row">
                               <div class="col-md-6">
                                  <strong class="text-muted d-block mb-2">Last Name</strong>
-                                 <span> Samuel </span> 
+                                 <span> <?=$data['user']['lname']?> </span> 
                             </div>
                             <div class="col-md-6 form-group">
                                  <strong class="text-muted d-block mb-2">Phone Number</strong>
-                                 <span> Sammitex Global</span> 
+                                 <span><?=$data['user']['user_phone']?></span> 
                           </div>                               
                           </div>
 
                           <div class="form-row">
                               <div class="col-md-6">
                                  <strong class="text-muted d-block mb-2">Email Address</strong>
-                                 <span> Samuel </span> 
+                                 <span> <?=$data['user']['user_email']?></span> 
                             </div>
                             <div class="col-md-6 form-group">
                                  <strong class="text-muted d-block mb-2">Address</strong>
-                                 <span> Sammitex Global</span> 
+                                 <span> <?=$data['user']['user_address']?></span> 
                           </div> 
                           </div> 
                           <div class="form-row">
                               <div class="col-md-6">
                                  <strong class="text-muted d-block mb-2">City</strong>
-                                 <span> Samuel </span> 
+                                 <span> <?=$data['user']['city_name']?> </span> 
                             </div>
                             <div class="col-md-6">
                                  <strong class="text-muted d-block mb-2">State</strong>
-                                 <span> Sammitex Global</span> 
+                                 <span> <?=$data['user']['state_name']?></span> 
                           </div> 
                           </div> 
                         </div>

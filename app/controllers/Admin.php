@@ -15,63 +15,65 @@ class Admin extends Controller
 		}
 		
 		$data = array(
-			'profile' => $this->adminRead->getProfile($_SESSION['admin_id'])
+			'profile' => $this->adminRead->getProfile($_SESSION['admin_id']),
+			'user_count' => $this->adminRead->getUserCount(),
+			'business_count' => $this->adminRead->getBusinessCount()
 			
 		);
+		//var_dump($data); die();
 		$this->view($this->dir_name.'index', $data);
 	}
 	function users(){
 		$data = array();
-		if(!(isset($_SESSION['admin_id'])) || $_SESSION['role'] == 'sales rep'){
+		if(!(isset($_SESSION['admin_id']))){
 			header('location: login');
 			die();
 		}
 		$data['profile'] =  $this->adminRead->getProfile($_SESSION['admin_id']);
 		$data['users'] = $this->adminRead->getUsers();
-		$data['user_count'] = $this->adminRead->getUserCount();
 
-		$this->view($this->dir_name.'all_users', $data);
+		$this->view($this->dir_name.'registered-users', $data);
 	}
-	function products(){
+	function businesses(){
 		$data = array();
-		if(!(isset($_SESSION['admin_id'])) || $_SESSION['role'] == 'sales rep'){
+		if(!(isset($_SESSION['admin_id']))){
 			header('location: login');
 			die();
 		}
 		$data['profile'] =  $this->adminRead->getProfile($_SESSION['admin_id']);
-		$data['products'] =  $this->adminRead->getProducts();
+		$data['businesses'] =  $this->adminRead->getBusinesses();
 		//var_dump($data);die();
-		$this->view($this->dir_name.'all_product', $data);
+		$this->view($this->dir_name.'businesses', $data);
 	}
-	function addUser(){
-		$data =array();
-		if(!(isset($_SESSION['admin_id'])) || $_SESSION['role'] == 'sales rep'){
+	function businessdetails($id){
+		$data = array();
+		if(!(isset($_SESSION['admin_id']))){
 			header('location: login');
 			die();
 		}
-		if(isset($_POST['addUser'])){
-			$data['reg_user'] = $this->write->addUser($_POST);
+		if($id == ""){
+			header('location: businesses');
+			die();
 		}
 		$data['profile'] =  $this->adminRead->getProfile($_SESSION['admin_id']);
+		$data['business'] =  $this->adminRead->getBusiness($id);
 		//var_dump($data);die();
-		
-		$this->view($this->dir_name.'add_user', $data);
+		$this->view($this->dir_name.'businessdetails', $data);
 	}
-	function addProduct(){
+	function userdetails($id){
 		$data = array();
-			if(!(isset($_SESSION['admin_id'])) || $_SESSION['role'] == 'sales rep'){
-				header('location: /mfmbook/login');
-				die();
-			}
-			
-			if(isset($_POST['addBook'])){
-				$data = $this->write->addBook($_POST);
-				$_SESSION['message'] = $data['log']; $_SESSION['colour'] = $data['colour'];
-			}
-	
-		$data['profile'] = $this->adminRead->getProfile($_SESSION['admin_id']);
+		if(!(isset($_SESSION['admin_id']))){
+			header('location: login');
+			die();
+		}
+		if($id == ""){
+			header('location: users');
+			die();
+		}
+		$data['profile'] =  $this->adminRead->getProfile($_SESSION['admin_id']);
+		$data['user'] = $this->adminRead->getUser($id);
 
-		$this->view($this->dir_name.'new_product', $data);
+		$this->view($this->dir_name.'users-details', $data);
 	}
 	function editProduct($id){
 		$data = array();
@@ -134,26 +136,6 @@ class Admin extends Controller
 		//var_dump($data['invoice']);die();
 
 		$this->view($this->dir_name.'view-sales', $data);
-	}
-	function deleteUser($id){
-		$data = $this->write->deleteUser($id);
-		$msg = $data['log'];
-		echo $msg;
-	}
-	function deleteBook($id){
-		$data = $this->write->deleteBook($id);
-		$msg = $data['log'];
-		echo $msg;
-	}
-	function deleteCart($id){
-		$data = $this->write->deleteCart($id);
-		$msg = $data['log'];
-		echo $msg;
-	}
-	function search($id){
-		$data = $this->adminRead->search($id);
-		header('Content-Type: application/json');
-		print ( json_encode($data) );
 	}
 	function addToCart($id){
 		$data = $this->write->addToCart($id);

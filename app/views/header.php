@@ -26,8 +26,12 @@
                      <li class="dropdown nav-item">
                         <a href="#" class="" data-toggle="dropdown">My Account<i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu" role="menu">
-                           <li><a href="userlogin">User</a></li>
-                           <li><a href="vendorlogin">Business</a></li>
+                           <?php if(isset($_SESSION['u_id']) || isset($_SESSION['business_id'])){?>
+                              <li><a href="logout">Logout</a></li>
+                              <?php } else{ ?>
+                              <li><a href="userlogin">User</a></li>
+                              <li><a href="vendorlogin">Business</a></li>
+                           <?php } ?>
                         </ul>
                      </li>  
                      <li class="nav-item ">
@@ -36,7 +40,7 @@
                      <li class="nav-item">
                         <a href="contact">Contact</a>
                      </li>
-                     <?php $name = (isset($_SESSION['user_id'])) ? $_SESSION['username'] : "" ; ?>
+                     <?php $name = (isset($_SESSION['u_id'])) ? $_SESSION['username'] : "" ; ?>
                      <li class="header-ticket nav-item">
                         <a class="welcome-btn btn" href="profile"> <i class="fa fa-user"></i> Welcome <?=$name?>
                         </a>

@@ -209,12 +209,12 @@ color:white; font-size:25px; font-family:san-serif;
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="registered-users">
+                                        <a href="admin/users">
                                             <i class="metismenu-icon"></i>Users
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="businesses" >
+                                        <a href="admin/businesses" >
                                             <i class="metismenu-icon"></i>Businesses
                                         </a>
                                     </li>                                                            
