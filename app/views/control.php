@@ -29,8 +29,7 @@
 	<link rel="stylesheet" href="public/css/magnific-popup.css">
 
 </head>
-    <!-- Javascript Files
-            ================================================== -->
+ 
       <!-- initialize jQuery Library -->
       <script src="public/js/jquery.js"></script>
 
@@ -38,7 +37,19 @@
       <!-- Bootstrap jQuery -->
       <script src="public/js/bootstrap.min.js"></script>
       <!-- Counter -->
-
+      <script src="public/js/jquery.appear.min.js"></script>
+      <!-- Countdown -->
+      <script src="public/js/jquery.jCounter.js"></script>
+      <!-- magnific-popup -->
+      <script src="public/js/jquery.magnific-popup.min.js"></script>
+      <!-- carousel -->
+      <script src="public/js/owl.carousel.min.js"></script> 
+      <!-- Waypoints -->
+      <script src="public/js/wow.min.js"></script>
+    
+      <!-- isotop -->
+      <script src="public/js/isotope.pkgd.min.js"></script>
 
       <!-- Template custom -->
       <script src="public/js/main.js"></script>
+

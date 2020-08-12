@@ -104,7 +104,7 @@
 </div>
 
 
-<a class="d-none d-sm-block" href="#" target="_blank" style="webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);-moz-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);-o-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);z-index:230;position:fixed;bottom:50%; top:40%;left:0px;width:60px;height:160px;background-image:url(public/images/sidelogo.png);background-position:center center;backgrond-size:cover;background-repeat:no-repeat;cursor:pointer"></a>
+<a class="d-none d-sm-block sides" href="#" target="_blank" style="webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);-moz-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);-o-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);z-index:230;position:fixed;bottom:50%; top:40%;left:0px;width:60px;height:160px;background-image:url(public/images/sidelogo.png);background-position:center center;backgrond-size:cover;background-repeat:no-repeat;cursor:pointer"></a>
 <section class="ftco-section ftco-no-pt ftco-no-pb">
 <div class="container">
 <div class="row">
@@ -113,24 +113,24 @@
 <div class="row no-gutters">
 <div class="col-md-4">
 <div class="top-category text-center no-border-left"  style="background: #96d50a !important;color:#fff">
-<h3><a href="#">Website &amp; Software</a></h3>
-<span class="icon flaticon-contact"></span>
-<p><span class="number">143</span> <span>Open position</span></p>
+<h3><a href="#"><b>100% Trusted</b></a></h3>
+<span class="icon fa fa-check-circle"></span>
+<p><span>Every reviewer verified, every review vetted, since day one</span></p>
 </div>
 </div>
 <div class="col-md-4 ">
 <div class="top-category active text-center">
-<h3><a href="#">Accounting &amp; Finance</a></h3>
-<span class="icon flaticon-accounting"></span>
-<p><span class="number">143</span> <span>Open position</span></p>
+<h3><a href="#"><b>No Ads, No Bais</b></a></h3>
+<span class="icon fa fa-warning"></span>
+<p><span>We dont sell leads or paid placement. Vendors cant skew results, period</span></p>
 </div>
 </div>
 
 <div class="col-md-4">
 <div class="top-category text-center" style="background: #238b53 !important;color:#fff">
- <h3><a href="#">Health &amp; Hospital</a></h3>
-<span class="icon flaticon-stethoscope"></span>
-<p><span class="number">143</span> <span>Open position</span></p>
+ <h3><a href="#"><b>Quality First</b></a></h3>
+<span class="icon fa fa-star"></span>
+<p> <span>Our review process results in more depth, and balance than other sites</span></p>
 </div>
 </div>
 </div>
@@ -198,9 +198,8 @@
       </ul>
     </div>
 </div>
-</div>
+</div> 
 </section>
-
     <section id="ts-speakers" class="ts-speakers speaker-classic" style="background-image:url(public/images/speakers/speaker_bg.png)">
          <div class="container">
             <div class="row">
@@ -275,7 +274,7 @@
          <!-- shap img end-->
       </section>
 
-  <div id="create-dp-banner-pc" onclick="location.replace('#')" style="webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);-moz-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);-o-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);z-index:999;cursor:pointer;position:fixed;top:18px;right:0px;width:60px;height:180px;background-image:url(public/images/sidelogo.png);background-position:center center;backgrond-size:cover;"></div>
+  <div id="create-dp-banner-pc" class="d-none d-sm-block " onclick="location.replace('#')" style="webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);-moz-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);-o-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);z-index:999;cursor:pointer;position:fixed;top:18px;right:0px;width:60px;height:180px;background-image:url(public/images/sidelogo.png);background-position:center center;backgrond-size:cover;"></div>
 
       <!-- ts pricing start-->
       <section class="ts-pricing gradient pos-relative" style="background-image: url(public/images/pricing/pricing_img.jpg)">

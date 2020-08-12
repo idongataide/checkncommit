@@ -1,26 +1,3 @@
-/*
-
-	Template Name: Exhibit - Conference & Event HTML Template
-	Author: Themewinter
-	Author URI: https://themeforest.net/user/themewinter
-	Description: Exhibit - Conference & Event HTML Template
-	Version: 1.0
-   =====================
-   table of content 
-   ====================
-   1.   menu toogle
-   2.   event counter
-   3.   funfact
-   4.   isotope grid
-   5.   main slider
-   6.   speaker popup
-   7.   gallery
-   8.   video popup
-   9.   hero area image animation
-   10.  wow animated
-   11.  back to top
-  
-*/
 
 
 jQuery(function ($) {
@@ -52,8 +29,19 @@ jQuery(function ($) {
 
    }
 
-
-
+   $(document).ready(function() {
+ 
+    $("#owl-demo").owlCarousel({
+   
+        autoPlay: 3000, //Set AutoPlay to 3 seconds
+   
+        items : 5,
+        itemsDesktop : [1199,3],
+        itemsDesktopSmall : [979,3]
+   
+    });
+   
+  });
    /*==========================================================
      funfact 
      ======================================================================*/
