@@ -90,6 +90,20 @@ class Home extends Controller
 		header('Location: ../checkncommit');
 		die();
 	}
+	function login(){
+		$data = array();
+		if(isset($_POST['login'])){
+			$data['login'] = $this->read->login($_POST);
+			$_SESSION['message'] = $data['login']['log'];
+			if($data['login']['status'] == 'success' ){
+				header('Location: index');
+				die();				
+			}
+		}
+
+		$data['title'] = 'User Login'; 
+		$this->view('user-login', $data);
+	}
 	function register(){
 		$data = array();
 		if(isset($_POST['register'])){
@@ -100,19 +114,6 @@ class Home extends Controller
 		$data['title'] = 'Registration'; 
 		$data['states'] = $this->read->getStates();
 		$this->view('register-users', $data);
-	}
-	function login(){
-		$data = array();
-		if(isset($_POST['login'])){
-			$data['login'] = $this->read->login($_POST);
-			if($data['login']['status'] == 'success' ){
-					header('Location: index');
-					die();				
-			}
-		}
-
-		$data['title'] = 'User Login'; 
-		$this->view('user-login', $data);
 	}
 	function vendorlogin(){
 		$data = array();

@@ -14,8 +14,10 @@
                                 <li><a href="#" class="active">Home</a>                                  
                                 </li>                              
                                 <li><a href="#">Reviews</a></li>
+                                <?php if(!isset($_SESSION['u_id'])){?>
                                 <li><a href="login" >Login/Register</a></li>
-
+                                <?php } else{?>
+                                <li><a href="logout" >Logout</a></li><?php } ?>
                                 <!-- <li><a href="#">Pages</a>
                                     <ul class="sub-menu">
                                         <li><a href="about.html">About</a></li>

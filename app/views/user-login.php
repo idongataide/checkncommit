@@ -20,6 +20,10 @@
                     <div class="fxt-content">
                         <h2>Login</h2> 
                         <div class="fxt-form">
+                        <?php $message = (isset($_SESSION['message'])) ? $_SESSION['message'] :'' ; unset($_SESSION['message']);?>
+                                <p style="color: red">
+                                    <?= $message; ?>
+                            </p>
                             <form method="POST">
                                 <div class="form-group">  
                                     <label for="email" class="input-label">Email Address</label>                                              
@@ -27,7 +31,7 @@
                                 </div>
                                 <div class="form-group wow bounce">  
                                     <label for="password" class="input-label">Password</label>                                               
-                                    <input id="password" type="password" class="form-control" name="password" placeholder="********" required="required">
+                                    <input id="password" type="password" class="form-control" name="pass" placeholder="********" required="required">
                                     <i toggle="#password" class="fa fa-fw fa-eye toggle-password field-icon"></i>
                                 </div>
                                 <div class="form-group">
@@ -40,7 +44,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group wow fadeInUp" data-wow-delay="900ms">
-                                    <button type="submit" class="fxt-btn-fill">Log in</button>
+                                    <button type="submit" name="login" class="fxt-btn-fill">Log in</button>
                                 </div>
                             </form>                            
                         </div> 

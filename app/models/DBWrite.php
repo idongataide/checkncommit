@@ -15,12 +15,7 @@ class DBWrite extends DBConn
 	function registerUser($data){
 		$name = $this->read->escape($data['fname']);
 		$lname = $this->read->escape($data['lname']);
-		$username = $this->read->escape($data['username']);
 		$email = $this->read->escape($data['email']);
-		$address = $this->read->escape( $data['address']);
-		$state = $this->read->escape( $data['state']);
-		$city = $this->read->escape( $data['city']);
-		$phone = $this->read->escape( $data['phone']);
 		$password = $this->read->escape($data['pass']);
 		$c_password = $this->read->escape($data['cPass']);
 		if($password != $c_password){
@@ -35,21 +30,21 @@ class DBWrite extends DBConn
 		}
 
 		$query = "INSERT into users
-		( `fname`,  `lname`, `username`,  `user_email`, `password`, `user_phone`, `user_address`, `user_state`, user_city , `token`, `status`) VALUES 
-		('{$name}', '{$lname}', '{$username}', '{$email}', '{$password}','{$phone}','{$address}','{$state}', {$city}, '{$token}',
+		( `fname`,  `lname`, `user_email`, `password`, `token`, `status`) VALUES 
+		('{$name}', '{$lname}','{$email}', '{$password}', '{$token}',
 		'Not active')";
 
 		if($run_query = mysqli_query($this->connection, $query)){
 			$mail = new PHPMailer;
 			// $mail->SMTPDebug = 3;
 			$mail->isSMTP();          // Set mailer to use SMTP
-			$mail->Host = 'mail.sidimart.com';  // Specify main and backup SMTP servers
+			$mail->Host = 'mail.joyzgas.com';  // Specify main and backup SMTP servers
 			$mail->SMTPAuth = true;          // Enable SMTP authentication
-			$mail->Username = 'noreply@sidimart.com';                
-			$mail->Password = 'sidimart@11';                          
+			$mail->Username = 'official@joyzgas.com';                
+			$mail->Password = 'joyzgas@11';                          
 			$mail->SMTPSecure = 'tls';       // Enable TLS encryption, `ssl` also accepted
 			$mail->Port = 26;          // TCP port to connect to
-			$mail->setFrom('noreply@sidimart.com', 'Sidimart');
+			$mail->setFrom('official@joyzgas.com', 'ChecknCommit');
 			$mail->addAddress($email, $name.' '.$lname);
 			$mail->SMTPOptions = array(
 				'ssl' => array(

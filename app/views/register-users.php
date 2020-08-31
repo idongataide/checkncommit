@@ -23,14 +23,20 @@
                         <div class="fxt-content">
                             <h2>Register</h2> 
                             <div class="fxt-form">
+                            <?php if(isset($data['reg_data'])){
+                                $message = $data['reg_data']['log']; $colour = $data['reg_data']['colour'];
+                                } else $message ="";?>
+                                <p class="lead" style="color: <?=$colour?>" >
+                                    <?= $message; ?>
+                            </p>
                                 <form method="POST">
                                     <div class="form-group">  
                                         <label for="f_name" class="input-label">First Name</label>                                              
-                                        <input type="text" id="f_name" class="form-control" name="f_name" placeholder="example name" required="required">
+                                        <input type="text" id="f_name" class="form-control" name="fname" placeholder="example name" required="required">
                                     </div>
                                     <div class="form-group">  
                                         <label for="l_name" class="input-label">Last Name</label>                                              
-                                        <input type="text" id="l_name" class="form-control" name="l_name" placeholder="example name" required="required">
+                                        <input type="text" id="l_name" class="form-control" name="lname" placeholder="example name" required="required">
                                     </div>
                                     <div class="form-group">  
                                         <label for="email" class="input-label">Email Address</label>                                              
@@ -38,24 +44,24 @@
                                     </div>
                                     <div class="form-group">  
                                         <label for="password" class="input-label">Password</label>                                               
-                                        <input id="password" type="password" class="form-control" name="password" placeholder="********" required="required">
+                                        <input id="password" type="password" class="form-control" name="pass" placeholder="********" required="required">
                                         <i toggle="#password" class="fa fa-fw fa-eye toggle-password field-icon"></i>
                                     </div>
                                     <div class="form-group">  
                                         <label for="c_password" class="input-label">Confirm Password</label>                                              
-                                        <input id="c_password" type="password" class="form-control" name="c_password" placeholder="********" required="required">
+                                        <input id="c_password" type="password" class="form-control" name="cPass" placeholder="********" required="required">
                                         <i toggle="#c_password" class="fa fa-fw fa-eye toggle-password field-icon"></i>
                                     </div>
                                     <div class="form-group">
                                         <div class="fxt-checkbox-area">
                                             <div class="checkbox">
-                                                <input id="checkbox1" type="checkbox">
+                                                <input id="checkbox1" type="checkbox" required>
                                                 <label for="checkbox1">I agree with the terms and condition</label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <button type="submit" class="fxt-btn-fill">Register</button>
+                                        <button type="submit" name="register" class="fxt-btn-fill">Register</button>
                                     </div>
                                 </form>                            
                             </div> 
