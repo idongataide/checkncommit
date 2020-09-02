@@ -35,8 +35,7 @@
 			return array('status' => 'failed', 'log' => mysqli_error($this->connection));
 		}
 		function getUsers(){
-			$query = mysqli_query($this->connection, "select * from users left join states on users.user_state = states.state_id 
-			left join cities on users.user_city = cities.city_id");
+			$query = mysqli_query($this->connection, "select * from users");
 			return $this->getStructureData($query);
 		}
 		function getUser($id){

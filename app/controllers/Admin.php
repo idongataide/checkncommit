@@ -9,13 +9,12 @@ class Admin extends Controller
 		$this->adminRead = new AdminDBRead();
 	}
 	function index(){
-		/* if(!(isset($_SESSION['admin_id']))){
+	if(!(isset($_SESSION['admin_id']))){
 			header('location: admin/login');
 			die();
-		} */
-		
+		} 
 		$data = array(
-			//'profile' => $this->adminRead->getProfile($_SESSION['admin_id']),
+			'profile' => $this->adminRead->getProfile($_SESSION['admin_id']),
 			'user_count' => $this->adminRead->getUserCount(),
 			'business_count' => $this->adminRead->getBusinessCount()
 			
@@ -25,38 +24,27 @@ class Admin extends Controller
 	}
 	function users(){
 		$data = array();
-		/* if(!(isset($_SESSION['admin_id']))){
+		if(!(isset($_SESSION['admin_id']))){
 			header('location: login');
 			die();
-		} */
-		//$data['profile'] =  $this->adminRead->getProfile($_SESSION['admin_id']);
+		}
+		$data['profile'] =  $this->adminRead->getProfile($_SESSION['admin_id']);
 		$data['users'] = $this->adminRead->getUsers();
 
 		$this->view($this->dir_name.'users', $data);
 	}
 	function businesses(){
 		$data = array();
-		/* if(!(isset($_SESSION['admin_id']))){
+		if(!(isset($_SESSION['admin_id']))){
 			header('location: login');
 			die();
 		}
-		$data['profile'] =  $this->adminRead->getProfile($_SESSION['admin_id']); */
+		$data['profile'] =  $this->adminRead->getProfile($_SESSION['admin_id']);
 		$data['businesses'] =  $this->adminRead->getBusinesses();
 		//var_dump($data);die();
 		$this->view($this->dir_name.'businesses', $data);
 	}
-	function followers(){
-		$data = array();
-		/* if(!(isset($_SESSION['admin_id']))){
-			header('location: login');
-			die();
-		}
-		$data['profile'] =  $this->adminRead->getProfile($_SESSION['admin_id']); */
-		$data['businesses'] =  $this->adminRead->getBusinesses();
-		//var_dump($data);die();
-		$this->view($this->dir_name.'users-follow', $data);
-	}
-	function businessdetails($id){
+	function profile($id){
 		$data = array();
 		if(!(isset($_SESSION['admin_id']))){
 			header('location: login');
@@ -68,8 +56,19 @@ class Admin extends Controller
 		}
 		$data['profile'] =  $this->adminRead->getProfile($_SESSION['admin_id']);
 		$data['business'] =  $this->adminRead->getBusiness($id);
+        $data['title'] = 'Business Profile';
+		$this->view($this->dir_name.'profile', $data);
+	}
+	function followedbusiness($id){
+		$data = array();
+		if(!(isset($_SESSION['admin_id']))){
+			header('location: login');
+			die();
+		}
+		$data['profile'] =  $this->adminRead->getProfile($_SESSION['admin_id']);
+		$data['businesses'] =  $this->adminRead->getBusinesses();
 		//var_dump($data);die();
-		$this->view($this->dir_name.'businessdetails', $data);
+		$this->view($this->dir_name.'users-follow', $data);
 	}
 	function userdetails($id){
 		$data = array();
@@ -88,19 +87,19 @@ class Admin extends Controller
 	}
 	function reviews(){
 		$data = array();
-			/* if(!(isset($_SESSION['admin_id']))){
+			if(!(isset($_SESSION['admin_id']))){
 				header('location: /login');
 				die();
-			} */
-	
+			}
+			$data['title'] = 'Reviews';
 
 		$this->view($this->dir_name.'business-reviews', $data);
 	}
 	function userreviews(){
-		/* if(!(isset($_SESSION['store_id']))){
+		if(!(isset($_SESSION['store_id']))){
             header('location: register');
             die();
-        } */
+        }
 		$data['title'] = 'User Review';
 		//var_dump($data['invoice']); die();
 		$this->view($this->dir_name.'reviews', $data);
@@ -110,8 +109,8 @@ class Admin extends Controller
 		$data = array();
 		$data['title'] = 'Admin Login';
 		if(isset($_POST['login'])){
-			//var_dump($_FILES['book']);die();
 			$data['login'] = $this->adminRead->adminlogin($_POST);
+			$_SESSION['message'] = $data['login']['log'];
 			if($data['login']['status'] == 'success' ){
 				header('Location: ../admin/index');
 				die();				

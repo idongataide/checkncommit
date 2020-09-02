@@ -1,21 +1,25 @@
 <?php include 'control.php'?> 
 
-<section class="fxt-template-animation fxt-template-layout18 loaded"  style="background-image: url(&quot;assets/img/images/project/1.jpg&quot;);">      
+<section class="fxt-template-animation fxt-template-layout18 loaded"  style="background-image: url(&quot;public/assets/img/images/project/1.jpg&quot;);">      
         <div class="fxt-content">
             <div class="fxt-header">
-                <a href="login-18.html" class="fxt-logo"><img src="assets/img/images/logo/logo01.png" alt="Logo"></a> 
+                <a href="index" class="fxt-logo"><img src="public/assets/img/images/logo/logo01.png" alt="Logo"></a> 
             </div>                            
             <div class="fxt-form"> 
-                <p> Admin Backoffice</p>
+                <p> Admin Backoffice</p><?php $message = (isset($_SESSION['message'])) ? $_SESSION['message'] :'' ; unset($_SESSION['message']);?>
+                                <p style="color: red">
+                                    <?= $message; ?>
+                            </p>
+
                 <form method="POST">
                     <div class="form-group " > 
                         <div class="wow fadeInUp" data-wow-delay="400ms">                                              
-                            <input type="email" id="email" class="form-control" name="email" placeholder="Email" required="required">
+                            <input type="text" id="username" class="form-control" name="username" placeholder="Username" required="required">
                         </div>
                     </div>
                     <div class="form-group">  
                         <div class="wow fadeInUp" data-wow-delay="700ms">                                              
-                            <input id="password" type="password" class="form-control" name="password" placeholder="********" required="required">
+                            <input id="password" type="password" class="form-control" name="pass" placeholder="********" required="required">
                             <i toggle="#password" class="fa fa-fw fa-eye toggle-password field-icon"></i>
                         </div>
                     </div>
@@ -32,7 +36,7 @@
                     </div>
                     <div class="form-group wow fadeInUp" data-wow-delay="900ms">
                         <div class="fxt-transformY-50 fxt-transition-delay-4">  
-                            <button type="submit" class="fxt-btn-fill"><a href="index1.php" class="switcher-text">Log in</a></button>
+                            <button type="submit" name="login" class="fxt-btn-fill">Log in</button>
                         </div>
                     </div>
                 </form>                
@@ -41,11 +45,11 @@
         </div>
     </section>
 
-    <script src="assets/js/jquery.min.js"></script>
+    <script src="public/assets/js/jquery.min.js"></script>
  
- <script src="assets/js/wow.min.js"></script>
+ <script src="public/assets/js/wow.min.js"></script>
 
- <script src="assets/js/main.js"></script>
+ <script src="public/assets/js/main.js"></script>
 
- <script src="assets/js/rev-slider.js"></script>
- <script src="assets/js/typed.js"></script>
+ <script src="public/assets/js/rev-slider.js"></script>
+ <script src="public/assets/js/typed.js"></script>

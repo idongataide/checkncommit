@@ -72,18 +72,6 @@ class Vendor extends Controller
 		$data['title'] = 'Followers';
 		$this->view($this->dir_name.'business-follow', $data); 
     }
-    function profile(){
-		/* if(!(isset($_SESSION['store_id']))){
-            header('location: register');
-            die();
-        } */
-		$data = array(
-			/* 'profile' => $this->vRead->getProfile($_SESSION['store_id']),
-			'product' => $this->vRead->getProducts($_SESSION['store_id']) */
-		);
-        $data['title'] = 'Profile';
-		$this->view($this->dir_name.'profile', $data);
-	}
 	function chat(){
 		/* if(!(isset($_SESSION['store_id']))){
             header('location: register');

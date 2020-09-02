@@ -41,7 +41,7 @@
                 <thead class="thead-light">
                   <tr>
                     <th>User Name</th>
-                    <th>Location</th>                    
+                    <th>Email Address</th>                    
                     <th>Date Registered</th>
                     <th>Status</th>
                     <th>Action</th>
@@ -49,30 +49,30 @@
                 </thead>
                 <tfoot>
                   <tr>
-                    <th>Business Name</th>
-                    <th>Location</th>                    
+                    <th>User Name</th>
+                    <th>Email Address</th>                    
                     <th>Date Registered</th>
                     <th>Status</th>
                     <th>Action</th>
                   </tr>
                 </tfoot>
                 <tbody>
-                    <?php for($i=0; $i<20; $i++){?> 
+                <?php foreach ($data['users'] as $key => $user): ?> 
                   <tr>
-                    <td>Tiger Battery</td>
-                    <td>Lagos</td>
-                    <td>2011/04/25</td>
+                    <td><?=$user['fname'].' '.$user['lname']?></td>
+                    <td><?=$user['user_email']?></td>
+                    <td><?=$user['date']?></td>
                     <td>
                       <span class="badge badge-dot mr-4">
                         <i class="bg-warning"></i>
-                        <span class="status">pending</span>
+                        <span class="status"><?=$user['status']?></span>
                       </span>
                     </td>
-                    <td><a href="users-follow.php"> <span class="badge badge-pill badge-success">View More </span> </a>    </td>
+                    <td><a href="admin/followedbusiness/<?=$user['user_id']?>"> <span class="badge badge-pill badge-success">View More </span> </a>    </td>
 
                      
                   </tr>
-                    <?php }?>
+                    <?php endforeach ;?>
              
                 
                 </tbody>

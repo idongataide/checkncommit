@@ -3,7 +3,7 @@
 
 <body>
 
- 
+<?php $business =  $data['business'] ; ?> 
     <!-- Header -->
     <!-- Header -->
     <div class="header pb-6 d-flex align-items-center" style="min-height: 500px; background-image: url( public/assets/img/theme/profile-cover.jpg); background-size: cover; background-position: center top;">
@@ -13,7 +13,7 @@
       <div class="container-fluid d-flex align-items-center">
         <div class="row w-100">
           <div class="col-lg-7 col-md-10 align-items-center">
-            <h1 class="display-2 text-white" style="text-align:center">Business Name </h1>
+            <h1 class="display-2 text-white" style="text-align:center"><?=$business['store_name']?> </h1>
             <p class="text-white mt-0 mb-5"></p>
           </div>
         </div>
@@ -24,7 +24,7 @@
       <div class="row">
         <div class="col-xl-4 order-xl-2 ">
           <div class="card card-profile pb-3">
-            <img src=" public/assets/img/theme/img-1-1000x600.jpg" alt="Image placeholder" class="card-img-top">
+            <img src=" public/assets/img/theme/img-1-1000x900.jpg" alt="Image placeholder" class="card-img-top">
             <div class="row justify-content-center">
               <div class="col-lg-3 order-lg-2">
                 <div class="card-profile-image">
@@ -43,7 +43,7 @@
          
           <div class="card">
             <!-- Card image -->
-            <img class="card-img-top" src=" public/assets/img/theme/img-1-1000x600.jpg" alt="Image placeholder">
+            <img class="card-img-top" src=" public/assets/img/theme/img-1-1000x900.jpg" alt="Image placeholder">
             <!-- List group -->
             <ul class="list-group list-group-flush">
               <li class="list-group-item">Business Identification</li>            
@@ -119,13 +119,13 @@
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label class="form-control-label" for="input-username">Username</label>
-                        <input type="text" id="input-username" class="form-control" placeholder="Username" value="lucky.jesse">
+                        <input type="text" id="input-username" class="form-control" value="<?=$business['store_name']?>" disabled>
                       </div>
                     </div>
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label class="form-control-label" for="input-email">Email address</label>
-                        <input type="email" id="input-email" class="form-control" placeholder="jesse@example.com">
+                        <input type="email" id="input-email" class="form-control" value="<?=$business['business_email']?>" disabled>
                       </div>
                     </div>
                   </div>
@@ -133,13 +133,13 @@
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label class="form-control-label" for="input-first-name">First name</label>
-                        <input type="text" id="input-first-name" class="form-control" placeholder="First name" value="Lucky">
+                        <input type="text" id="input-first-name" class="form-control" value="<?=$business['business_fname']?>"disabled>
                       </div>
                     </div>
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label class="form-control-label" for="input-last-name">Last name</label>
-                        <input type="text" id="input-last-name" class="form-control" placeholder="Last name" value="Jesse">
+                        <input type="text" id="input-last-name" class="form-control" value="<?=$business['business_lname']?>" disabled>
                       </div>
                     </div>
                   </div>
@@ -152,7 +152,7 @@
                     <div class="col-md-12">
                       <div class="form-group">
                         <label class="form-control-label" for="input-address">Address</label>
-                        <input id="input-address" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09" type="text">
+                        <input id="input-address" class="form-control" value="<?=$business['business_address']?>" type="text" disabled>
                       </div>
                     </div>
                   </div>
@@ -160,19 +160,19 @@
                     <div class="col-lg-4">
                       <div class="form-group">
                         <label class="form-control-label" for="input-city">City</label>
-                        <input type="text" id="input-city" class="form-control" placeholder="City" value="New York">
+                        <input type="text" id="input-city" class="form-control" placeholder="City" value="<?=$business['city_name']?>" disabled>
                       </div>
                     </div>
                     <div class="col-lg-4">
                       <div class="form-group">
                         <label class="form-control-label" for="input-country">Country</label>
-                        <input type="text" id="input-country" class="form-control" placeholder="Country" value="United States">
+                        <input type="text" id="input-country" class="form-control" placeholder="Country" value="United States" disabled>
                       </div>
                     </div>
                     <div class="col-lg-4">
                       <div class="form-group">
                         <label class="form-control-label" for="input-country">Postal code</label>
-                        <input type="number" id="input-postal-code" class="form-control" placeholder="Postal code">
+                        <input type="number" id="input-postal-code" class="form-control" placeholder="Postal code" disabled>
                       </div>
                     </div>
                   </div>
@@ -185,7 +185,7 @@
                     <div class="col-md-12">
                       <div class="form-group">
                         <label class="form-control-label" for="input-address">Facebook</label>
-                        <input id="input-address" class="form-control" placeholder="Facebook" value="" type="text">
+                        <input id="input-address" class="form-control" placeholder="Facebook" value="" type="text" disabled>
                       </div>
                     </div>
                   </div>
@@ -193,19 +193,19 @@
                     <div class="col-lg-4">
                       <div class="form-group">
                         <label class="form-control-label" for="input-city">Instagram</label>
-                        <input type="text" id="input-city" class="form-control" placeholder="Instagram">
+                        <input type="text" id="input-city" class="form-control" placeholder="Instagram" disabled>
                       </div>
                     </div>
                     <div class="col-lg-4">
                       <div class="form-group">
-                        <label class="form-control-label" for="input-country">Watsapp</label>
-                        <input type="text" id="input-country" class="form-control" placeholder="Watsapp" >
+                        <label class="form-control-label" for="input-country">Whatsapp</label>
+                        <input type="text" id="input-country" class="form-control" placeholder="Whatsapp"  disabled>
                       </div>
                     </div>
                     <div class="col-lg-4">
                       <div class="form-group">
                         <label class="form-control-label" for="input-country">Linkedin</label>
-                        <input type="number" id="input-postal-code" class="form-control" placeholder="Linkedin">
+                        <input type="number" id="input-postal-code" class="form-control" placeholder="Linkedin" disabled>
                       </div>
                     </div>
                   </div>
@@ -216,7 +216,7 @@
                 <div class="pl-lg-4">
                   <div class="form-group">
                     <label class="form-control-label">About Business</label>
-                    <textarea rows="4" class="form-control" placeholder="A few words about you ...">We are your perfect choice and partner </textarea>
+                    <textarea rows="4" class="form-control" placeholder="A few words about you ..." disabled>We are your perfect choice and partner </textarea>
                   </div>
                 </div>
               </form>

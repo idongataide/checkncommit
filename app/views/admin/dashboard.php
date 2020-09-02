@@ -79,13 +79,7 @@
                       <span class="sidenav-mini-icon"> P </span>
                       <span class="sidenav-normal"> View Businesses </span>
                     </a>
-                  </li>        
-                  <li class="nav-item">
-                    <a href="admin/followers" class="nav-link">
-                      <span class="sidenav-mini-icon"> P </span>
-                      <span class="sidenav-normal"> Business Followers </span>
-                    </a>
-                  </li>                       
+                  </li>                            
                              
                 </ul>
               </div>
